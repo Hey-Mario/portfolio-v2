@@ -3,6 +3,7 @@ import type { PortfolioContent } from "./types"
 /** Version française de `en.ts` — mêmes sources, même structure. */
 export const fr: PortfolioContent = {
   hero: {
+    role: "Ingénieur full-stack",
     availability: "Disponible à partir de janvier 2027 · missions & CDI",
     title:
       "Je conçois des plateformes SaaS et marketplaces fiables, de la base de données à l'interface.",
@@ -209,6 +210,7 @@ export const fr: PortfolioContent = {
         role: "Développeur full-stack · Solar Transit",
         summary:
           "Une plateforme de simulation photovoltaïque pour les professionnels du solaire et les particuliers : estimations de production, analyse financière, rapports PDF et abonnements payants.",
+        focus: ["Multidevise", "i18n & RTL", "SEO", "Mise en cache"],
         highlights: [
           "Tarification multidevise.",
           "Interface multilingue avec prise en charge des langues de droite à gauche.",
@@ -225,6 +227,7 @@ export const fr: PortfolioContent = {
         role: "Développeur full-stack · Solar Transit",
         summary:
           "La location de panneaux solaires avec maintenance complète : les clients demandent une étude personnalisée, s'inscrivent et suivent leur projet solaire en ligne.",
+        focus: ["Inscription client", "Suivi des leads", "Rendez-vous", "Notifications temps réel"],
         highlights: [
           "Validation de la facture d'électricité (CEB) à l'inscription.",
           "Suivi de la progression du lead au client.",
@@ -255,6 +258,7 @@ export const fr: PortfolioContent = {
         category: "ERP interne & pipeline commercial",
         role: "Développeur full-stack · Solar Transit",
         summary: "L'outil interne qui pilote le pipeline commercial, du lead au paiement.",
+        focus: ["ERP", "Pipeline commercial", "Reporting", "Automatisation des e-mails"],
         highlights: [
           "Parcours du lead au paiement.",
           "Attribution automatique et en masse des leads.",

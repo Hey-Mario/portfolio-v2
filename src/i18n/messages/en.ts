@@ -19,6 +19,28 @@ export const en = {
     contact: "Contact",
     downloadCv: "Download CV",
   },
+  common: {
+    present: "Present",
+    details: "Details",
+    visitSite: "Visit site",
+    workedOn: "What I worked on",
+    stack: "Stack",
+    focus: "Key areas",
+    newTab: "(opens in a new tab)",
+    openQuote: "“",
+    closeQuote: "”",
+  },
+  status: {
+    live: "Live",
+    internal: "Internal tool",
+    upcoming: "Not launched yet",
+  },
+  social: {
+    email: "Email",
+    whatsapp: "WhatsApp",
+    github: "GitHub",
+    linkedin: "LinkedIn",
+  },
   footer: {
     builtWith: "Built with Next.js, Tailwind CSS and shadcn/ui.",
     viewSource: "View source",

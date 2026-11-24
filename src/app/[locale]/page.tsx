@@ -1,27 +1,30 @@
-import { sectionIds } from "@/lib/site"
-import { getDictionary } from "@/i18n/server"
+import { About } from "@/components/sections/about"
+import { Contact } from "@/components/sections/contact"
+import { Education } from "@/components/sections/education"
+import { Experience } from "@/components/sections/experience"
+import { Hero } from "@/components/sections/hero"
+import { Projects } from "@/components/sections/projects"
+import { Services } from "@/components/sections/services"
+import { Skills } from "@/components/sections/skills"
+import { Testimonial } from "@/components/sections/testimonial"
+import { getContent } from "@/content"
+import { getDictionary, getLocale } from "@/i18n/server"
 
-// Temporary shell preview — replaced section by section in the next steps.
 export default async function HomePage() {
-  const t = await getDictionary()
+  const [locale, t] = await Promise.all([getLocale(), getDictionary()])
+  const content = getContent(locale)
 
   return (
-    <div className="container-page">
-      <section className="py-24">
-        <p className="eyebrow">Portfolio · 2026</p>
-        <h1 className="mt-4 max-w-3xl text-4xl font-semibold tracking-tight text-balance sm:text-6xl">
-          {t.meta.title}
-        </h1>
-        <p className="mt-6 max-w-2xl text-lg text-pretty text-muted-foreground">
-          {t.meta.description}
-        </p>
-      </section>
-      {sectionIds.map((id, index) => (
-        <section key={id} id={id} className="border-t border-border/60 py-24">
-          <p className="eyebrow">{String(index + 1).padStart(2, "0")}</p>
-          <h2 className="mt-3 text-3xl font-semibold tracking-tight">{t.nav[id]}</h2>
-        </section>
-      ))}
-    </div>
+    <>
+      <Hero locale={locale} hero={content.hero} stats={content.stats} t={t} />
+      <About about={content.about} />
+      <Services services={content.services} />
+      <Experience locale={locale} experience={content.experience} t={t} />
+      <Projects locale={locale} projects={content.projects} t={t} />
+      <Testimonial testimonial={content.testimonial} t={t} />
+      <Skills skills={content.skills} />
+      <Education education={content.education} t={t} />
+      <Contact contact={content.contact} t={t} />
+    </>
   )
 }

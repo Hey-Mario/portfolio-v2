@@ -21,6 +21,28 @@ export const fr: Messages = {
     contact: "Contact",
     downloadCv: "Télécharger le CV",
   },
+  common: {
+    present: "aujourd'hui",
+    details: "Détails",
+    visitSite: "Voir le site",
+    workedOn: "Ce sur quoi j'ai travaillé",
+    stack: "Technologies",
+    focus: "Domaines clés",
+    newTab: "(s'ouvre dans un nouvel onglet)",
+    openQuote: "« ",
+    closeQuote: " »",
+  },
+  status: {
+    live: "En ligne",
+    internal: "Outil interne",
+    upcoming: "Bientôt lancé",
+  },
+  social: {
+    email: "E-mail",
+    whatsapp: "WhatsApp",
+    github: "GitHub",
+    linkedin: "LinkedIn",
+  },
   footer: {
     builtWith: "Réalisé avec Next.js, Tailwind CSS et shadcn/ui.",
     viewSource: "Voir le code source",

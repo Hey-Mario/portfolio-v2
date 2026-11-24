@@ -11,16 +11,16 @@ export type Period = { start: YearMonth; end?: YearMonth }
 
 export type ProjectStatus = "live" | "internal" | "upcoming"
 
-type ExperienceMeta = { url?: string; period: Period; stack: string[] }
+export type ExperienceMeta = { url?: string; period: Period; stack: string[] }
 
-type ProjectMeta = {
+export type ProjectMeta = {
   url?: string
   status: ProjectStatus
   period: Period
   stack: string[]
 }
 
-export const experienceMeta = {
+const experiences = {
   pyxis: {
     url: "https://pyxis.site",
     period: { start: "2026-10" },
@@ -51,9 +51,11 @@ export const experienceMeta = {
   },
 } satisfies Record<string, ExperienceMeta>
 
-export type ExperienceId = keyof typeof experienceMeta
+export type ExperienceId = keyof typeof experiences
 
-export const projectMeta = {
+export const experienceMeta: Record<ExperienceId, ExperienceMeta> = experiences
+
+const projects = {
   lavanty: {
     url: "https://lavanty.online",
     status: "live",
@@ -70,13 +72,13 @@ export const projectMeta = {
     url: "https://pvgis.com",
     status: "live",
     period: { start: "2023-05" },
-    stack: ["Multi-currency", "i18n & RTL", "SEO", "Caching"],
+    stack: [],
   },
   "solar-rent": {
     url: "https://solar-rent.mu",
     status: "live",
     period: { start: "2023-05" },
-    stack: ["Real-time notifications", "Lead tracking", "Appointments"],
+    stack: [],
   },
   "solar-advisor": {
     status: "upcoming",
@@ -86,7 +88,7 @@ export const projectMeta = {
   sfer: {
     status: "internal",
     period: { start: "2023-05" },
-    stack: ["ERP", "Sales pipeline", "Reporting", "Email automation"],
+    stack: [],
   },
   "pyxis-site": {
     url: "https://pyxis.site",
@@ -96,4 +98,6 @@ export const projectMeta = {
   },
 } satisfies Record<string, ProjectMeta>
 
-export type ProjectId = keyof typeof projectMeta
+export type ProjectId = keyof typeof projects
+
+export const projectMeta: Record<ProjectId, ProjectMeta> = projects

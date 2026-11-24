@@ -6,6 +6,7 @@ import type { PortfolioContent } from "./types"
  */
 export const en: PortfolioContent = {
   hero: {
+    role: "Full-stack engineer",
     availability: "Available from January 2027 · missions & full-time roles",
     title: "I build reliable SaaS and marketplace platforms, from database to interface.",
     summary:
@@ -209,6 +210,7 @@ export const en: PortfolioContent = {
         role: "Full-stack developer · Solar Transit",
         summary:
           "A photovoltaic simulation platform for solar professionals and homeowners, with production estimates, financial analysis, PDF reports and paid subscriptions.",
+        focus: ["Multi-currency", "i18n & RTL", "SEO", "Caching"],
         highlights: [
           "Multi-currency pricing.",
           "Multilingual interface with right-to-left language support.",
@@ -225,6 +227,7 @@ export const en: PortfolioContent = {
         role: "Full-stack developer · Solar Transit",
         summary:
           "Solar leasing with full maintenance: customers request a personalised study, sign up and follow their solar project online.",
+        focus: ["Customer onboarding", "Lead tracking", "Appointments", "Real-time notifications"],
         highlights: [
           "Electricity-bill (CEB) validation during registration.",
           "Lead-to-customer progress tracking.",
@@ -255,6 +258,7 @@ export const en: PortfolioContent = {
         category: "Internal ERP & sales pipeline",
         role: "Full-stack developer · Solar Transit",
         summary: "The internal tool that runs the sales pipeline, from lead to payment.",
+        focus: ["ERP", "Sales pipeline", "Reporting", "Email automation"],
         highlights: [
           "Lead-to-payment workflows.",
           "Automated and bulk lead allocation.",

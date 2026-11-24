@@ -24,6 +24,15 @@ describe("portfolio content", () => {
     )
   })
 
+  it("gives every project either a tech stack or localized focus tags", () => {
+    for (const locale of [en, fr]) {
+      for (const project of locale.projects.items) {
+        const tags = project.focus ?? projectMeta[project.id].stack
+        expect(tags.length, project.id).toBeGreaterThan(0)
+      }
+    }
+  })
+
   it("keeps lists aligned between locales", () => {
     expect(fr.stats).toHaveLength(en.stats.length)
     expect(fr.testimonial.quotes).toHaveLength(en.testimonial.quotes.length)

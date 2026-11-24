@@ -25,6 +25,8 @@ export type ProjectItem = {
   summary: string
   /** Shown in the details panel. */
   highlights: string[]
+  /** Localized focus areas, used instead of a tech stack when the stack isn't public. */
+  focus?: string[]
   /** Where the description comes from when it isn't Mario's own commits. */
   note?: string
 }
@@ -39,6 +41,7 @@ export type SectionIntro = { eyebrow: string; title: string; intro?: string }
 
 export type PortfolioContent = {
   hero: {
+    role: string
     availability: string
     title: string
     summary: string

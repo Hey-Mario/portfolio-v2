@@ -6,6 +6,8 @@ export const siteConfig = {
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://portfolio-mario.vercel.app",
   email: "lovamanitramario@gmail.com",
   phone: "+261 36 17 007 07",
+  /** Path under /public, or null to render the hero without a portrait. */
+  headshot: null as string | null,
   links: {
     github: "https://github.com/Hey-Mario",
     linkedin: null as string | null,
