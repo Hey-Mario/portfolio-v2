@@ -12,7 +12,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return locales.map((locale) => ({
     url: `${siteConfig.url}/${locale}`,
     changeFrequency: "monthly",
-    priority: 1,
+    priority: locale === "en" ? 1 : 0.9,
     alternates: { languages },
   }))
 }

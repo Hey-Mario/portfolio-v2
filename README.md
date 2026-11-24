@@ -9,7 +9,7 @@ building SaaS and marketplace platforms.
 
 - **Next.js 16** App Router with React Server Components and **Cache Components** — both locales are
   prerendered as static HTML.
-- **Native i18n** (no library): `proxy.ts` negotiates the language (cookie → `Accept-Language`),
+- **Native i18n** (no library): `proxy.ts` picks the language (saved choice, otherwise English),
   `next/root-params` exposes the locale to any Server Component, and messages/content are plain
   TypeScript objects, so a missing translation is a **compile error**.
 - **Typed content model** — all copy lives in [`src/content`](./src/content); dates, links and stacks

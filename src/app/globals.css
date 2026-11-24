@@ -1,6 +1,11 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
+@import "animate.css/source/_vars.css";
+@import "animate.css/source/_base.css";
+@import "animate.css/source/fading_entrances/fadeInUp.css";
+@import "animate.css/source/fading_entrances/fadeInLeft.css";
+@import "animate.css/source/fading_entrances/fadeInRight.css";
 
 @custom-variant dark (&:is(.dark *));
 
@@ -51,6 +56,7 @@
 }
 
 :root {
+  --animate-duration: 0.6s;
   --background: oklch(0.993 0.002 95);
   --foreground: oklch(0.17 0.006 260);
   --brand: oklch(0.52 0.105 190);
@@ -132,6 +138,8 @@
     scroll-behavior: smooth;
   }
   body {
+    /* Horizontal slide-ins must never create a sideways scrollbar. */
+    overflow-x: clip;
     @apply bg-background text-foreground;
   }
   /* Tailwind 4 no longer sets a pointer cursor on buttons: restore it for everything clickable. */
@@ -143,7 +151,9 @@
   summary,
   select,
   label[for],
-  input:is([type="checkbox"], [type="radio"], [type="submit"], [type="button"], [type="file"]):not(:disabled),
+  input:is([type="checkbox"], [type="radio"], [type="submit"], [type="button"], [type="file"]):not(
+      :disabled
+    ),
   a[href] {
     cursor: pointer;
   }
@@ -182,21 +192,144 @@
   color: var(--brand);
 }
 
-/* Progressive scroll reveal: pure CSS, no JS. Browsers without scroll-driven
-   animations (or users preferring reduced motion) simply see the content. */
+/* Animate.css slides by 100% of the element's size, which is a long sweep for wide or tall blocks.
+   Redefine the directional fades with a short, fixed distance so they stay quick and fluid. */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 1.5rem, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translate3d(-2rem, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translate3d(2rem, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+/* Content waits invisible until ScrollAnimations plays its Animate.css effect. It only hides
+   when scripting is on and motion is allowed, so no-JS and reduced-motion visitors see everything. */
 @utility reveal {
-  @media (prefers-reduced-motion: no-preference) {
-    @supports (animation-timeline: view()) {
-      animation: reveal-up linear both;
-      animation-timeline: view();
-      animation-range: entry 0% entry 60%;
+  @media (scripting: enabled) and (prefers-reduced-motion: no-preference) {
+    &:not([data-revealed], .animated) {
+      opacity: 0;
     }
   }
 }
 
-@keyframes reveal-up {
-  from {
-    opacity: 0;
-    transform: translateY(1.25rem);
+/* ---------- Motion & decoration ----------
+   Everything below is progressive enhancement: scroll-driven effects only run
+   where supported and never for users who prefer reduced motion. */
+
+/* Thin brand-coloured progress bar tied to the page scroll. */
+@utility scroll-progress {
+  transform: scaleX(0);
+  @media (prefers-reduced-motion: no-preference) {
+    @supports (animation-timeline: scroll()) {
+      animation: grow-x linear both;
+      animation-timeline: scroll(root);
+    }
   }
+}
+
+@keyframes grow-x {
+  to {
+    transform: scaleX(1);
+  }
+}
+
+/* Header gains a soft shadow once the page starts scrolling. */
+@utility header-scroll {
+  @media (prefers-reduced-motion: no-preference) {
+    @supports (animation-timeline: scroll()) {
+      animation: header-elevate linear both;
+      animation-timeline: scroll(root);
+      animation-range: 0 140px;
+    }
+  }
+}
+
+@keyframes header-elevate {
+  to {
+    box-shadow: 0 10px 30px -18px oklch(0 0 0 / 0.3);
+  }
+}
+
+/* A line that draws itself as its section scrolls through the viewport. */
+@utility draw-y {
+  transform-origin: top;
+  @media (prefers-reduced-motion: no-preference) {
+    @supports (animation-timeline: view()) {
+      animation: grow-y linear both;
+      animation-timeline: view();
+      animation-range: entry 20% cover 65%;
+    }
+  }
+}
+
+@keyframes grow-y {
+  from {
+    transform: scaleY(0);
+  }
+}
+
+/* Slight parallax for the portrait's offset frame. */
+@utility drift {
+  @media (prefers-reduced-motion: no-preference) {
+    @supports (animation-timeline: view()) {
+      animation: drift-down linear both;
+      animation-timeline: view();
+      animation-range: exit 0% exit 100%;
+    }
+  }
+}
+
+@keyframes drift-down {
+  to {
+    transform: translate(0.75rem, 2.5rem);
+  }
+}
+
+/* Hero backdrop: two soft brand glows and a faint grid that fades out. */
+@utility hero-glow {
+  background:
+    radial-gradient(
+      50rem 28rem at 88% -8%,
+      color-mix(in oklch, var(--brand) 16%, transparent),
+      transparent 70%
+    ),
+    radial-gradient(
+      34rem 22rem at -6% 35%,
+      color-mix(in oklch, var(--brand) 9%, transparent),
+      transparent 70%
+    );
+}
+
+@utility grid-fade {
+  background-image:
+    linear-gradient(to right, var(--border) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--border) 1px, transparent 1px);
+  background-size: 3.5rem 3.5rem;
+  mask-image: radial-gradient(ellipse 70% 80% at 75% 0%, black, transparent 75%);
+  opacity: 0.55;
 }

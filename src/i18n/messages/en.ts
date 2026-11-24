@@ -1,14 +1,15 @@
 export const en = {
   meta: {
-    title: "Mario Randriamanantena — Full-stack engineer",
+    title: "Mario Randriamanantena — Full-stack Engineer for SaaS & Marketplaces",
     description:
-      "Full-stack engineer building SaaS and marketplace platforms with Next.js, Angular, NestJS and Laravel. Open to missions and full-time roles.",
+      "Full-stack engineer building SaaS and marketplace platforms with Next.js, Angular, NestJS and Laravel. Available for freelance missions and full-time roles, remotely.",
   },
   a11y: {
     skipToContent: "Skip to content",
     toggleTheme: "Toggle dark mode",
-    switchLocale: "Passer le site en français",
     openMenu: "Open menu",
+    scrollToTop: "Back to top",
+    language: "Language",
     mainNav: "Main navigation",
   },
   nav: {

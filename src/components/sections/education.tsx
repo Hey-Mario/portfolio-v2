@@ -14,7 +14,7 @@ export function Education({ education, t }: EducationProps) {
       <div className="grid gap-16 lg:grid-cols-2">
         <ul className="space-y-8">
           {education.items.map((item) => (
-            <li key={item.degree} className="flex reveal gap-4">
+            <li key={item.degree} data-animate="fadeInLeft" className="flex gap-4 reveal">
               <GraduationCapIcon aria-hidden className="mt-0.5 size-5 shrink-0 text-brand" />
               <div>
                 <h3 className="font-semibold text-pretty">
@@ -37,13 +37,17 @@ export function Education({ education, t }: EducationProps) {
         </ul>
 
         <div>
-          <h3 className="flex reveal items-center gap-2 text-sm font-semibold">
+          <h3 className="flex items-center gap-2 text-sm font-semibold reveal">
             <AwardIcon aria-hidden className="size-4 text-brand" />
             {education.awardsTitle}
           </h3>
           <ul className="mt-6 divide-y divide-border/60 border-y border-border/60">
             {education.awards.map((award) => (
-              <li key={award.project} className="grid reveal grid-cols-[5.5rem_1fr] gap-4 py-4">
+              <li
+                key={award.project}
+                data-animate="fadeInRight"
+                className="grid grid-cols-[5.5rem_1fr] gap-4 py-4 reveal"
+              >
                 <span className="text-sm font-semibold text-brand">{award.rank}</span>
                 <div className="text-sm">
                   <p className="font-medium">

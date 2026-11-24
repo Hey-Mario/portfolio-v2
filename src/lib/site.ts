@@ -11,7 +11,7 @@ export const siteConfig = {
   headshot: "/images/headshot.webp" as string | null,
   links: {
     github: "https://github.com/Hey-Mario",
-    linkedin: null as string | null,
+    linkedin: "https://www.linkedin.com/in/mario-lovamanitra-randriamanantena-0798bb230/",
     whatsapp: "https://wa.me/261361700707",
     source: "https://github.com/Hey-Mario/portfolio-v2",
   },

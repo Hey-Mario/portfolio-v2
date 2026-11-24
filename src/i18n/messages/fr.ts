@@ -2,15 +2,16 @@ import type { Messages } from "./en"
 
 export const fr: Messages = {
   meta: {
-    title: "Mario Randriamanantena — Ingénieur full-stack",
+    title: "Mario Randriamanantena — Ingénieur full-stack, SaaS & marketplaces",
     description:
-      "Ingénieur full-stack qui conçoit des plateformes SaaS et marketplaces avec Next.js, Angular, NestJS et Laravel. Disponible pour des missions et des postes à temps plein.",
+      "Ingénieur full-stack spécialisé en plateformes SaaS et marketplaces (Next.js, Angular, NestJS, Laravel). Disponible pour des missions freelance et des postes à temps plein, à distance.",
   },
   a11y: {
     skipToContent: "Aller au contenu",
     toggleTheme: "Basculer le mode sombre",
-    switchLocale: "Switch the site to English",
     openMenu: "Ouvrir le menu",
+    scrollToTop: "Retour en haut",
+    language: "Langue",
     mainNav: "Navigation principale",
   },
   nav: {

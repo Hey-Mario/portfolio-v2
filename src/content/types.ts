@@ -44,6 +44,8 @@ export type PortfolioContent = {
     role: string
     availability: string
     title: string
+    /** Words of `title` to emphasise in the hero. */
+    highlights: string[]
     summary: string
     location: string
     primaryCta: string

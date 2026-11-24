@@ -3,6 +3,8 @@ import { Geist, Geist_Mono } from "next/font/google"
 
 import { SiteFooter } from "@/components/layout/site-footer"
 import { SiteHeader } from "@/components/layout/site-header"
+import { ScrollAnimations } from "@/components/layout/scroll-animations"
+import { ScrollToTop } from "@/components/layout/scroll-to-top"
 import { SkipLink } from "@/components/layout/skip-link"
 import { ThemeProvider } from "@/components/providers/theme-provider"
 import { Toaster } from "@/components/ui/sonner"
@@ -10,6 +12,8 @@ import { TooltipProvider } from "@/components/ui/tooltip"
 import { locales } from "@/i18n/config"
 import { getDictionary, getLocale } from "@/i18n/server"
 import { buildMetadata } from "@/lib/seo"
+
+export { viewport } from "@/lib/seo"
 
 import "../globals.css"
 
@@ -39,11 +43,17 @@ export default async function LocaleLayout({ children }: LayoutProps<"/[locale]"
         <ThemeProvider>
           <TooltipProvider>
             <SkipLink label={t.a11y.skipToContent} />
+            <div
+              aria-hidden
+              className="fixed inset-x-0 top-0 z-50 h-0.5 origin-left scroll-progress bg-brand"
+            />
+            <ScrollAnimations />
             <SiteHeader locale={locale} t={t} />
             <main id="main" className="flex-1">
               {children}
             </main>
             <SiteFooter t={t} />
+            <ScrollToTop label={t.a11y.scrollToTop} />
             <Toaster position="bottom-center" />
           </TooltipProvider>
         </ThemeProvider>

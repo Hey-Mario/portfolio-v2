@@ -6,6 +6,7 @@ export const fr: PortfolioContent = {
     role: "Ingénieur full-stack",
     availability: "Disponible immédiatement · missions & CDI",
     title: "Je conçois des plateformes SaaS et marketplaces.",
+    highlights: ["SaaS", "marketplaces"],
     summary:
       "Je suis Mario, ingénieur full-stack avec plus de trois ans et demi d'expérience en production. J'ai livré des fonctionnalités pour les produits de simulation, de location et de marketplace d'un groupe du secteur solaire, une marketplace e-learning et une plateforme d'enchères en ligne, avec Next.js, Angular, NestJS, Python et Laravel.",
     location: "Antananarivo, Madagascar · À distance (UTC+3)",

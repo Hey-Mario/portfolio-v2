@@ -9,6 +9,7 @@ export const en: PortfolioContent = {
     role: "Full-stack engineer",
     availability: "Available now · missions & full-time roles",
     title: "I build SaaS and marketplace platforms.",
+    highlights: ["SaaS", "marketplace"],
     summary:
       "I'm Mario, a full-stack engineer with more than three and a half years of production experience. I have shipped features for a solar-energy group's simulation, rental and marketplace products, an e-learning marketplace and an online auction platform, with Next.js, Angular, NestJS, Python and Laravel.",
     location: "Antananarivo, Madagascar · Remote (UTC+3)",

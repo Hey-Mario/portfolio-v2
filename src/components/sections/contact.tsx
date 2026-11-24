@@ -32,9 +32,15 @@ export function Contact({ contact, t }: ContactProps) {
   ]
 
   return (
-    <Section id="contact" eyebrow={contact.eyebrow} title={contact.title} intro={contact.intro}>
+    <Section
+      id="contact"
+      tone="muted"
+      eyebrow={contact.eyebrow}
+      title={contact.title}
+      intro={contact.intro}
+    >
       <div className="grid gap-12 lg:grid-cols-[1fr_1.4fr] lg:gap-16">
-        <div className="reveal">
+        <div data-animate="fadeInLeft" className="reveal">
           <h3 className="text-sm font-semibold">{t.contactForm.direct}</h3>
           <ul className="mt-5 space-y-3">
             {direct.map(({ icon: Icon, label, href, external }) => (
@@ -53,7 +59,10 @@ export function Contact({ contact, t }: ContactProps) {
           </ul>
         </div>
 
-        <div className="relative reveal rounded-xl border border-border/80 bg-card p-6 sm:p-8">
+        <div
+          data-animate="fadeInRight"
+          className="relative rounded-xl border border-border/80 bg-card p-6 reveal sm:p-8"
+        >
           <ContactForm labels={t.contactForm} />
         </div>
       </div>

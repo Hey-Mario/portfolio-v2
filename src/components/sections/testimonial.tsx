@@ -15,12 +15,18 @@ export function Testimonial({ testimonial, t }: TestimonialProps) {
     <section
       id="recommendation"
       aria-label={testimonial.eyebrow}
-      className="border-t border-border/60 bg-muted/40 py-20 sm:py-28"
+      className="border-t border-border/60 bg-muted/70 py-16 sm:py-20 lg:py-24"
     >
       <figure className="container-page reveal">
         <p className="eyebrow">{testimonial.eyebrow}</p>
-        <blockquote className="mt-8">
-          <p className="max-w-4xl text-2xl leading-snug font-medium tracking-tight text-balance sm:text-3xl">
+        <span
+          aria-hidden
+          className="mt-6 block font-serif text-7xl leading-none text-brand/30 select-none"
+        >
+          “
+        </span>
+        <blockquote className="-mt-2">
+          <p className="max-w-4xl text-xl leading-snug font-medium tracking-tight text-balance sm:text-2xl lg:text-3xl">
             {quote(lead)}
           </p>
           <div className="mt-10 grid gap-8 text-pretty text-muted-foreground md:grid-cols-2">

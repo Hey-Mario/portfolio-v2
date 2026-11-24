@@ -41,8 +41,12 @@ export function Projects({ locale, projects, t }: ProjectsProps) {
           const featured = index === 0
           const tags = project.focus ?? meta.stack
           return (
-            <li key={project.id} className={cn("reveal", featured && "md:col-span-2")}>
-              <article className="flex h-full flex-col rounded-xl border border-border/80 bg-card p-6 transition-colors hover:border-foreground/25 sm:p-8">
+            <li
+              key={project.id}
+              data-animate={featured ? "fadeInUp" : index % 2 === 1 ? "fadeInLeft" : "fadeInRight"}
+              className={cn("reveal", featured && "md:col-span-2")}
+            >
+              <article className="flex h-full flex-col rounded-xl border border-border/80 bg-card p-6 transition duration-300 hover:-translate-y-0.5 hover:border-brand/40 hover:shadow-md hover:shadow-brand/5 sm:p-8">
                 <div className="flex items-start justify-between gap-4">
                   <p className="eyebrow">{project.category}</p>
                   <StatusBadge status={meta.status} label={t.status[meta.status]} />
@@ -95,7 +99,7 @@ export function Projects({ locale, projects, t }: ProjectsProps) {
         })}
       </ul>
 
-      <div className="mt-16 reveal">
+      <div className="mt-14 reveal sm:mt-16">
         <h3 className="text-sm font-semibold">{projects.more.title}</h3>
         <ul className="mt-5 grid gap-x-8 gap-y-4 border-t border-border/60 pt-5 sm:grid-cols-2 lg:grid-cols-3">
           {projects.more.items.map((site) => (

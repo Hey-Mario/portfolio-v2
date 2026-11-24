@@ -2,12 +2,21 @@ import AxeBuilder from "@axe-core/playwright"
 import { expect, test } from "@playwright/test"
 
 test.describe("routing", () => {
-  test("redirects / to the visitor's preferred language", async ({ browser }) => {
+  test("redirects / to English by default, whatever the browser language", async ({ browser }) => {
     const fr = await browser.newContext({ locale: "fr-FR" })
     const page = await fr.newPage()
     await page.goto("/")
-    await expect(page).toHaveURL(/\/fr$/)
+    await expect(page).toHaveURL(/\/en$/)
     await fr.close()
+  })
+
+  test("redirects / to the language chosen with the switcher", async ({ browser }) => {
+    const context = await browser.newContext()
+    await context.addCookies([{ name: "NEXT_LOCALE", value: "fr", url: "http://localhost:3010" }])
+    const page = await context.newPage()
+    await page.goto("/")
+    await expect(page).toHaveURL(/\/fr$/)
+    await context.close()
   })
 
   test("serves both locales with the right language attribute", async ({ page }) => {
@@ -28,7 +37,10 @@ test.describe("routing", () => {
 test.describe("interactions", () => {
   test("switches language and keeps the current section", async ({ page, isMobile }) => {
     await page.goto("/en#projects")
-    await page.getByRole("link", { name: "Passer le site en français" }).click()
+    await page
+      .getByRole("group", { name: "Language" })
+      .getByRole("link", { name: "Français" })
+      .click()
     await expect(page).toHaveURL(/\/fr#projects$/)
     await expect(page.locator("html")).toHaveAttribute("lang", "fr")
     test.info().annotations.push({ type: "viewport", description: isMobile ? "mobile" : "desktop" })
