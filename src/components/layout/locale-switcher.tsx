@@ -18,7 +18,6 @@ export function LocaleSwitcher({ locale, label }: { locale: Locale; label: strin
         href={href}
         hrefLang={target}
         lang={target}
-        aria-label={label}
         title={label}
         className="font-mono text-xs tracking-wider uppercase"
         onClick={(event) => {
@@ -28,6 +27,7 @@ export function LocaleSwitcher({ locale, label }: { locale: Locale; label: strin
         }}
       >
         {target}
+        <span className="sr-only"> — {label}</span>
       </a>
     </Button>
   )

@@ -23,7 +23,7 @@ export function SiteHeader({ locale, t }: { locale: Locale; t: Messages }) {
           >
             MR
           </span>
-          <span className="hidden sm:inline">{siteConfig.shortName}</span>
+          <span className="sr-only sm:not-sr-only">{siteConfig.shortName}</span>
         </a>
 
         <nav aria-label={t.a11y.mainNav} className="hidden md:block">
