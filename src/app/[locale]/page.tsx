@@ -9,6 +9,7 @@ import { Skills } from "@/components/sections/skills"
 import { Testimonial } from "@/components/sections/testimonial"
 import { getContent } from "@/content"
 import { getDictionary, getLocale } from "@/i18n/server"
+import { personJsonLd, serializeJsonLd } from "@/lib/seo"
 
 export default async function HomePage() {
   const [locale, t] = await Promise.all([getLocale(), getDictionary()])
@@ -16,6 +17,10 @@ export default async function HomePage() {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: serializeJsonLd(personJsonLd(locale, content)) }}
+      />
       <Hero locale={locale} hero={content.hero} stats={content.stats} t={t} />
       <About about={content.about} />
       <Services services={content.services} />

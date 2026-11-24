@@ -9,7 +9,7 @@ import { Toaster } from "@/components/ui/sonner"
 import { TooltipProvider } from "@/components/ui/tooltip"
 import { locales } from "@/i18n/config"
 import { getDictionary, getLocale } from "@/i18n/server"
-import { siteConfig } from "@/lib/site"
+import { buildMetadata } from "@/lib/seo"
 
 import "../globals.css"
 
@@ -21,12 +21,8 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata(): Promise<Metadata> {
-  const t = await getDictionary()
-  return {
-    metadataBase: new URL(siteConfig.url),
-    title: { default: t.meta.title, template: `%s · ${siteConfig.shortName}` },
-    description: t.meta.description,
-  }
+  const [locale, t] = await Promise.all([getLocale(), getDictionary()])
+  return buildMetadata(locale, t)
 }
 
 export default async function LocaleLayout({ children }: LayoutProps<"/[locale]">) {
