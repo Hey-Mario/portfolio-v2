@@ -53,7 +53,11 @@ export type PortfolioContent = {
   about: SectionIntro & { paragraphs: string[]; pillarsTitle: string; pillars: Pillar[] }
   services: SectionIntro & { items: Service[]; processTitle: string; process: ProcessStep[] }
   experience: SectionIntro & { items: ExperienceItem[] }
-  projects: SectionIntro & { items: ProjectItem[] }
+  projects: SectionIntro & {
+    items: ProjectItem[]
+    /** Other live sites I contributed to, shown as a compact list. */
+    more: { title: string; items: { name: string; url: string; description: string }[] }
+  }
   testimonial: {
     eyebrow: string
     quotes: string[]

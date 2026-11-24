@@ -36,6 +36,9 @@ describe("portfolio content", () => {
   it("keeps lists aligned between locales", () => {
     expect(fr.stats).toHaveLength(en.stats.length)
     expect(fr.testimonial.quotes).toHaveLength(en.testimonial.quotes.length)
+    expect(fr.projects.more.items.map((site) => site.url)).toEqual(
+      en.projects.more.items.map((site) => site.url),
+    )
     expect(fr.education.awards).toHaveLength(en.education.awards.length)
     en.projects.items.forEach((project, index) => {
       expect(fr.projects.items[index].highlights).toHaveLength(project.highlights.length)

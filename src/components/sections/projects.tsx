@@ -94,6 +94,24 @@ export function Projects({ locale, projects, t }: ProjectsProps) {
           )
         })}
       </ul>
+
+      <div className="mt-16 reveal">
+        <h3 className="text-sm font-semibold">{projects.more.title}</h3>
+        <ul className="mt-5 grid gap-x-8 gap-y-4 border-t border-border/60 pt-5 sm:grid-cols-2 lg:grid-cols-3">
+          {projects.more.items.map((site) => (
+            <li key={site.url}>
+              <ExternalLink
+                href={site.url}
+                newTabLabel={t.common.newTab}
+                className="font-medium underline-offset-4 hover:underline"
+              >
+                {site.name}
+              </ExternalLink>
+              <p className="mt-1 text-sm text-pretty text-muted-foreground">{site.description}</p>
+            </li>
+          ))}
+        </ul>
+      </div>
     </Section>
   )
 }

@@ -4,18 +4,17 @@ import type { PortfolioContent } from "./types"
 export const fr: PortfolioContent = {
   hero: {
     role: "Ingénieur full-stack",
-    availability: "Disponible à partir de janvier 2027 · missions & CDI",
-    title:
-      "Je conçois des plateformes SaaS et marketplaces fiables, de la base de données à l'interface.",
+    availability: "Disponible immédiatement · missions & CDI",
+    title: "Je conçois des plateformes SaaS et marketplaces.",
     summary:
-      "Je suis Mario, ingénieur full-stack avec trois ans et demi d'expérience en production. J'ai livré des fonctionnalités pour les produits de simulation, de location et de marketplace d'un groupe du secteur solaire, une marketplace e-learning et une plateforme d'enchères en ligne, avec Next.js, Angular, NestJS, Fastify et Laravel.",
+      "Je suis Mario, ingénieur full-stack avec trois ans et demi d'expérience en production. J'ai livré des fonctionnalités pour les produits de simulation, de location et de marketplace d'un groupe du secteur solaire, une marketplace e-learning et une plateforme d'enchères en ligne, avec Next.js, Angular, NestJS, Python et Laravel.",
     location: "Antananarivo, Madagascar · À distance (UTC+3)",
     primaryCta: "Démarrer un projet",
     secondaryCta: "Télécharger le CV",
   },
   stats: [
     { value: "3,5 ans", label: "à développer des logiciels en production" },
-    { value: "4", label: "plateformes en ligne auxquelles j'ai contribué" },
+    { value: "10", label: "sites et plateformes en ligne auxquels j'ai contribué" },
     { value: "6", label: "podiums en hackathons et concours" },
   ],
   about: {
@@ -280,6 +279,36 @@ export const fr: PortfolioContent = {
         ],
       },
     ],
+    more: {
+      title: "Autres sites en ligne auxquels j'ai contribué",
+      items: [
+        {
+          name: "Solardropshipping",
+          url: "https://solardropshipping.com",
+          description: "Marketplace de fournitures solaires en gros",
+        },
+        {
+          name: "Solar PV Schemes",
+          url: "https://solar-pv-schemes.mu",
+          description: "Outil de préparation des dossiers de candidature solaire CEB",
+        },
+        {
+          name: "MSDG.mu",
+          url: "https://msdg.mu",
+          description: "Inscription en ligne au programme solaire MSDG du CEB",
+        },
+        {
+          name: "SolarPool",
+          url: "https://solarpool.mu",
+          description: "Pompes de piscine solaires par Solar Center Mauritius",
+        },
+        {
+          name: "MBS467",
+          url: "https://mbs467.mu",
+          description: "Publicité sur le plus grand écran LED extérieur de Maurice",
+        },
+      ],
+    },
   },
   testimonial: {
     eyebrow: "Recommandation",
@@ -415,6 +444,6 @@ export const fr: PortfolioContent = {
     eyebrow: "Contact",
     title: "Construisons quelque chose ensemble",
     intro:
-      "Parlez-moi de votre projet ou du poste que vous proposez. Je suis disponible pour des missions et des postes à temps plein à partir de janvier 2027.",
+      "Parlez-moi de votre projet ou du poste que vous proposez. Je suis disponible immédiatement pour des missions et des postes à temps plein.",
   },
 }

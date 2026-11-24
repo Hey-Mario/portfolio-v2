@@ -7,17 +7,17 @@ import type { PortfolioContent } from "./types"
 export const en: PortfolioContent = {
   hero: {
     role: "Full-stack engineer",
-    availability: "Available from January 2027 · missions & full-time roles",
-    title: "I build reliable SaaS and marketplace platforms, from database to interface.",
+    availability: "Available now · missions & full-time roles",
+    title: "I build SaaS and marketplace platforms.",
     summary:
-      "I'm Mario, a full-stack engineer with three and a half years of production experience. I have shipped features for a solar-energy group's simulation, rental and marketplace products, an e-learning marketplace and an online auction platform, with Next.js, Angular, NestJS, Fastify and Laravel.",
+      "I'm Mario, a full-stack engineer with three and a half years of production experience. I have shipped features for a solar-energy group's simulation, rental and marketplace products, an e-learning marketplace and an online auction platform, with Next.js, Angular, NestJS, Python and Laravel.",
     location: "Antananarivo, Madagascar · Remote (UTC+3)",
     primaryCta: "Start a project",
     secondaryCta: "Download CV",
   },
   stats: [
     { value: "3.5 yrs", label: "building production software" },
-    { value: "4", label: "live platforms I've shipped features to" },
+    { value: "10", label: "live websites & platforms I've contributed to" },
     { value: "6", label: "hackathon & competition podiums" },
   ],
   about: {
@@ -280,6 +280,36 @@ export const en: PortfolioContent = {
         ],
       },
     ],
+    more: {
+      title: "Other live sites I've contributed to",
+      items: [
+        {
+          name: "Solardropshipping",
+          url: "https://solardropshipping.com",
+          description: "Wholesale solar supplies marketplace",
+        },
+        {
+          name: "Solar PV Schemes",
+          url: "https://solar-pv-schemes.mu",
+          description: "Tool for preparing CEB solar-scheme application files",
+        },
+        {
+          name: "MSDG.mu",
+          url: "https://msdg.mu",
+          description: "Online registration for CEB's small-scale solar program",
+        },
+        {
+          name: "SolarPool",
+          url: "https://solarpool.mu",
+          description: "Solar-powered pool pumps by Solar Center Mauritius",
+        },
+        {
+          name: "MBS467",
+          url: "https://mbs467.mu",
+          description: "Advertising on Mauritius' largest outdoor LED screen",
+        },
+      ],
+    },
   },
   testimonial: {
     eyebrow: "Recommendation",
@@ -413,6 +443,6 @@ export const en: PortfolioContent = {
     eyebrow: "Contact",
     title: "Let's build something together",
     intro:
-      "Tell me about your project or the role you're hiring for. I'm available for missions and full-time positions from January 2027.",
+      "Tell me about your project or the role you're hiring for. I'm available right away for missions and full-time positions.",
   },
 }

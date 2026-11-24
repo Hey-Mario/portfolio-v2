@@ -72,7 +72,7 @@ template receives `from_name`, `from_email`, `reply_to`, `reason`, `message`, `t
 
 | Script                                               | Description                                                      |
 | ---------------------------------------------------- | ---------------------------------------------------------------- |
-| `pnpm dev`                                           | Start the dev server                                             |
+| `pnpm dev`                                           | Start the dev server on http://localhost:3100                    |
 | `pnpm build` / `pnpm start`                          | Production build / serve                                         |
 | `pnpm lint` · `pnpm typecheck` · `pnpm format:check` | Static checks                                                    |
 | `pnpm test`                                          | Unit tests (Vitest)                                              |
