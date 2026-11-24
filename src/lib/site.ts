@@ -16,8 +16,8 @@ export const siteConfig = {
     source: "https://github.com/Hey-Mario/portfolio-v2",
   },
   cv: {
-    en: "/cv/cv-en.pdf",
-    fr: "/cv/cv-fr.pdf",
+    en: "/cv/Mario-Randriamanantena-CV-EN.pdf",
+    fr: "/cv/Mario-Randriamanantena-CV-FR.pdf",
   } satisfies Record<Locale, string>,
 }
 

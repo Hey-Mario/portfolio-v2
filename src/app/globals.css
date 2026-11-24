@@ -134,6 +134,23 @@
   body {
     @apply bg-background text-foreground;
   }
+  /* Tailwind 4 no longer sets a pointer cursor on buttons: restore it for everything clickable. */
+  button:not(:disabled),
+  [role="button"]:not([aria-disabled="true"]),
+  [role="tab"],
+  [role="menuitem"],
+  [role="option"],
+  summary,
+  select,
+  label[for],
+  input:is([type="checkbox"], [type="radio"], [type="submit"], [type="button"], [type="file"]):not(:disabled),
+  a[href] {
+    cursor: pointer;
+  }
+  :disabled,
+  [aria-disabled="true"] {
+    cursor: not-allowed;
+  }
   ::selection {
     background-color: color-mix(in oklch, var(--brand) 25%, transparent);
   }
