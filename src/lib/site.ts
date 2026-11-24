@@ -1,7 +1,8 @@
 import type { Locale } from "@/i18n/config"
 
 export const siteConfig = {
-  name: "Lovamanitra Mario Randriamanantena",
+  /** Official order: family name first. */
+  name: "RANDRIAMANANTENA Lovamanitra Mario",
   shortName: "Mario Randriamanantena",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://portfolio-mario.vercel.app",
   email: "lovamanitramario@gmail.com",

@@ -51,7 +51,7 @@
     "vitest": "^5.1.1"
   },
   "packageManager": "pnpm@9.15.4",
-  "description": "Personal portfolio of Lovamanitra Mario Randriamanantena — full-stack engineer.",
+  "description": "Personal portfolio of RANDRIAMANANTENA Lovamanitra Mario — full-stack engineer.",
   "engines": {
     "node": ">=22"
   }

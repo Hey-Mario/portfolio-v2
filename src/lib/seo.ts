@@ -48,6 +48,8 @@ export function personJsonLd(locale: Locale, content: PortfolioContent) {
     "@type": "Person",
     name: siteConfig.name,
     alternateName: siteConfig.shortName,
+    givenName: "Lovamanitra Mario",
+    familyName: "Randriamanantena",
     url: `${siteConfig.url}/${locale}`,
     email: `mailto:${siteConfig.email}`,
     jobTitle: content.hero.role,

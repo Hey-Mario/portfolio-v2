@@ -10,14 +10,14 @@ export const en: PortfolioContent = {
     availability: "Available now · missions & full-time roles",
     title: "I build SaaS and marketplace platforms.",
     summary:
-      "I'm Mario, a full-stack engineer with three and a half years of production experience. I have shipped features for a solar-energy group's simulation, rental and marketplace products, an e-learning marketplace and an online auction platform, with Next.js, Angular, NestJS, Python and Laravel.",
+      "I'm Mario, a full-stack engineer with more than three and a half years of production experience. I have shipped features for a solar-energy group's simulation, rental and marketplace products, an e-learning marketplace and an online auction platform, with Next.js, Angular, NestJS, Python and Laravel.",
     location: "Antananarivo, Madagascar · Remote (UTC+3)",
     primaryCta: "Start a project",
     secondaryCta: "Download CV",
   },
   stats: [
-    { value: "3.5 yrs", label: "building production software" },
-    { value: "10", label: "live websites & platforms I've contributed to" },
+    { value: "3.5+ yrs", label: "building production software" },
+    { value: "10+", label: "live websites & platforms I've contributed to" },
     { value: "6", label: "hackathon & competition podiums" },
   ],
   about: {
@@ -56,7 +56,7 @@ export const en: PortfolioContent = {
     eyebrow: "Services",
     title: "How I can help",
     intro:
-      "As an extra senior pair of hands in your team, or as the engineer who takes your product from idea to production.",
+      "As an extra pair of hands in your team, or as the engineer who takes your product from idea to production.",
     items: [
       {
         title: "Full-stack web applications",
@@ -121,7 +121,7 @@ export const en: PortfolioContent = {
           "Built Lavanty's integrated support system: tickets, private attachments, agent assignment, quick replies, screenshot capture and phishing-safe links.",
           "Moved bid guarantees behind a Strategy pattern so auctions can switch between deposit-backed and KYC-only bidding, even mid-auction, covered by 600+ lines of integration tests.",
           "Hardened authentication with escalating PIN lockout, open-redirect protection and server-side session revocation.",
-          "Delivered the bilingual Pyxis website on Next.js 16, with Playwright and axe accessibility checks across 16 viewport widths.",
+          "Improved the internal task-management tool used by the sales team: task duplication, outcome tracking and permissions.",
         ],
       },
       {
@@ -137,6 +137,7 @@ export const en: PortfolioContent = {
           "SFER ERP: lead-to-payment workflows, automated and bulk lead allocation, daily reminder emails, reporting and faster search and counts.",
           "Solar Advisor marketplace: supplier and product pages, reviews and favourites, and a NestJS API that ranks suppliers by continent.",
           "Platform foundations: multi-tenant seat limits, secure admin support access, referrals, Odoo CRM analytics and auditable data synchronisation with recovery.",
+          "Other live sites I contributed to: solarpool.mu, msdg.mu, mbs467.mu, solar-pv-schemes.mu, solardropshipping.com.",
         ],
       },
       {
@@ -148,7 +149,7 @@ export const en: PortfolioContent = {
         highlights: [
           "Created the NestJS back end and a reusable TypeORM query layer: filters, nested relations, field selection and sorting.",
           "Built course progress tracking computed with SQL views, and the complete quiz system: builder, grading, attempts and retry modes.",
-          "Implemented commerce: transactional checkout, coupons, HMAC-signed affiliate links, instructor commissions and Mobile Money order review.",
+          "Built the commerce flow: orders created in a single database transaction, coupons, affiliate links, instructor commissions, and Mobile Money payments that an admin verifies and approves.",
         ],
       },
       {
@@ -156,10 +157,11 @@ export const en: PortfolioContent = {
         company: "Mahomby",
         role: "Full-stack developer intern",
         location: "Antananarivo",
-        summary: "First professional project, from data model to deployment.",
+        summary:
+          "A startup building a mobile app that helps students find universities and apply to them directly.",
         highlights: [
           "Designed and built the MongoDB data model.",
-          "Built the user interface with Angular and Ionic, and the REST API with Node.js and Express.",
+          "Built the mobile app interface with Angular and Ionic, and the REST API with Node.js and Express.",
           "Handled the deployment on Render.",
         ],
       },
@@ -185,6 +187,7 @@ export const en: PortfolioContent = {
           "Race-free daily AI quotas and referral rewards using atomic MongoDB updates and per-account serialised, retryable processing.",
           "Accent-insensitive, ranked listing search, and rate-limited seller lookup to prevent enumeration.",
           "Dispute and arbitration flows: buyer no-show sanctions, offer to the second bidder, idempotent dispute opening.",
+          "Automated the generation of an always up-to-date FAQ by running a carefully structured prompt through a reusable AI skill.",
         ],
       },
       {
@@ -199,7 +202,7 @@ export const en: PortfolioContent = {
           "Reusable TypeORM query engine: around fourteen filter operators, nested joins, GraphQL-like field selection and nested sorting.",
           "Course progress computed by SQL views instead of counters that can drift, and quizzes locked until the course is completed.",
           "Complete quiz system: teacher-side builder, multiple-choice grading against a pass mark, limited attempts and feedback modes.",
-          "Commerce: transactional checkout, coupons, HMAC-signed affiliate links, per-instructor commission splits and Mobile Money order review.",
+          "Commerce: orders created in a single database transaction, coupons, affiliate links, per-instructor commission splits, and manual Mobile Money payments that an admin verifies and approves.",
           "Admin back office, httpOnly-cookie JWT sessions, role-based UI and SEO metadata.",
         ],
       },
@@ -398,6 +401,7 @@ export const en: PortfolioContent = {
         school: "ESTI, Antananarivo",
       },
       { degree: "Laravel framework training", school: "NDAO EDEV" },
+      { degree: "English language course", school: "ECM English Course Madagascar" },
     ],
     awardsTitle: "Hackathons & competitions",
     awards: [

@@ -1,6 +1,6 @@
 # portfolio-v2
 
-Source code of my personal portfolio — **Lovamanitra Mario Randriamanantena**, full-stack engineer
+Source code of my personal portfolio — **RANDRIAMANANTENA Lovamanitra Mario**, full-stack engineer
 building SaaS and marketplace platforms.
 
 **Live:** https://portfolio-mario.vercel.app · English & French

@@ -7,14 +7,14 @@ export const fr: PortfolioContent = {
     availability: "Disponible immédiatement · missions & CDI",
     title: "Je conçois des plateformes SaaS et marketplaces.",
     summary:
-      "Je suis Mario, ingénieur full-stack avec trois ans et demi d'expérience en production. J'ai livré des fonctionnalités pour les produits de simulation, de location et de marketplace d'un groupe du secteur solaire, une marketplace e-learning et une plateforme d'enchères en ligne, avec Next.js, Angular, NestJS, Python et Laravel.",
+      "Je suis Mario, ingénieur full-stack avec plus de trois ans et demi d'expérience en production. J'ai livré des fonctionnalités pour les produits de simulation, de location et de marketplace d'un groupe du secteur solaire, une marketplace e-learning et une plateforme d'enchères en ligne, avec Next.js, Angular, NestJS, Python et Laravel.",
     location: "Antananarivo, Madagascar · À distance (UTC+3)",
     primaryCta: "Démarrer un projet",
     secondaryCta: "Télécharger le CV",
   },
   stats: [
-    { value: "3,5 ans", label: "à développer des logiciels en production" },
-    { value: "10", label: "sites et plateformes en ligne auxquels j'ai contribué" },
+    { value: "+3,5 ans", label: "à développer des logiciels en production" },
+    { value: "+10", label: "sites et plateformes en ligne auxquels j'ai contribué" },
     { value: "6", label: "podiums en hackathons et concours" },
   ],
   about: {
@@ -53,7 +53,7 @@ export const fr: PortfolioContent = {
     eyebrow: "Services",
     title: "Comment je peux vous aider",
     intro:
-      "En renfort senior dans votre équipe, ou comme l'ingénieur qui emmène votre produit de l'idée à la production.",
+      "En renfort dans votre équipe, ou comme l'ingénieur qui emmène votre produit de l'idée à la production.",
     items: [
       {
         title: "Applications web full-stack",
@@ -119,7 +119,7 @@ export const fr: PortfolioContent = {
           "Conception du système de support intégré de Lavanty : tickets, pièces jointes privées, assignation des agents, réponses rapides, capture d'écran et liens protégés contre l'hameçonnage.",
           "Garanties d'enchère placées derrière un pattern Strategy pour basculer entre enchères avec caution et enchères avec KYC seul, même en cours d'enchère, couvert par plus de 600 lignes de tests d'intégration.",
           "Renforcement de l'authentification : verrouillage progressif du code PIN, protection contre les redirections ouvertes et révocation des sessions côté serveur.",
-          "Livraison du site bilingue de Pyxis sous Next.js 16, avec des tests Playwright et d'accessibilité axe sur 16 largeurs d'écran.",
+          "Amélioration de l'outil interne de gestion des tâches de l'équipe commerciale : duplication des tâches, suivi des résultats et permissions.",
         ],
       },
       {
@@ -135,6 +135,7 @@ export const fr: PortfolioContent = {
           "ERP SFER : parcours du lead au paiement, attribution automatique et en masse des leads, e-mails de rappel quotidiens, reporting, recherche et comptages plus rapides.",
           "Marketplace Solar Advisor : pages fournisseurs et produits, avis et favoris, et une API NestJS qui classe les fournisseurs par continent.",
           "Socle de plateforme : limites de sièges multi-tenant, accès support administrateur sécurisé, parrainage, analytique CRM Odoo et synchronisation de données auditable avec reprise sur erreur.",
+          "Contributions à d'autres sites en ligne : solarpool.mu, msdg.mu, mbs467.mu, solar-pv-schemes.mu, solardropshipping.com.",
         ],
       },
       {
@@ -147,7 +148,7 @@ export const fr: PortfolioContent = {
         highlights: [
           "Création du back-end NestJS et d'une couche de requêtes TypeORM réutilisable : filtres, relations imbriquées, sélection de champs et tris.",
           "Suivi de progression calculé par des vues SQL, et système de quiz complet : création, notation, tentatives et modes de reprise.",
-          "Partie commerce : paiement transactionnel, coupons, liens d'affiliation signés HMAC, commissions des formateurs et validation des commandes Mobile Money.",
+          "Partie commerce : commandes créées dans une seule transaction en base de données, coupons, liens d'affiliation, commissions des formateurs et paiements Mobile Money vérifiés puis validés par un administrateur.",
         ],
       },
       {
@@ -155,10 +156,11 @@ export const fr: PortfolioContent = {
         company: "Mahomby",
         role: "Stagiaire développeur full-stack",
         location: "Antananarivo",
-        summary: "Premier projet professionnel, du modèle de données au déploiement.",
+        summary:
+          "Une startup qui développe une application mobile pour aider les étudiants à trouver des universités et à y postuler directement.",
         highlights: [
           "Conception et création du modèle de données MongoDB.",
-          "Interface utilisateur en Angular et Ionic, API REST en Node.js et Express.",
+          "Interface de l'application mobile en Angular et Ionic, API REST en Node.js et Express.",
           "Déploiement du projet sur Render.",
         ],
       },
@@ -184,6 +186,7 @@ export const fr: PortfolioContent = {
           "Quotas IA quotidiens et récompenses de parrainage sans conditions de course, grâce à des mises à jour MongoDB atomiques et un traitement sérialisé et rejouable par compte.",
           "Recherche d'annonces insensible aux accents avec classement des résultats, et recherche de vendeurs limitée en débit contre l'énumération.",
           "Parcours de litige et d'arbitrage : sanction de l'acheteur absent, proposition au deuxième enchérisseur, ouverture de litige idempotente.",
+          "Automatisation de la création d'une FAQ toujours à jour, en lançant un prompt soigneusement construit via un skill IA réutilisable.",
         ],
       },
       {
@@ -198,7 +201,7 @@ export const fr: PortfolioContent = {
           "Moteur de requêtes TypeORM réutilisable : une quinzaine d'opérateurs de filtre, jointures imbriquées, sélection de champs façon GraphQL et tri imbriqué.",
           "Progression calculée par des vues SQL plutôt que par des compteurs qui peuvent dériver, et quiz débloqués à la fin du cours.",
           "Système de quiz complet : création côté formateur, notation des QCM selon un seuil de réussite, tentatives limitées et modes de correction.",
-          "Commerce : paiement transactionnel, coupons, liens d'affiliation signés HMAC, partage des commissions par formateur et validation des commandes Mobile Money.",
+          "Commerce : commandes créées dans une seule transaction en base de données, coupons, liens d'affiliation, partage des commissions par formateur et paiements Mobile Money manuels, vérifiés puis validés par un administrateur.",
           "Back-office d'administration, sessions JWT en cookie httpOnly, interface selon les rôles et métadonnées SEO.",
         ],
       },
@@ -398,6 +401,7 @@ export const fr: PortfolioContent = {
         school: "ESTI, Antananarivo",
       },
       { degree: "Formation au framework Laravel", school: "NDAO EDEV" },
+      { degree: "Cours d'anglais", school: "ECM English Course Madagascar" },
     ],
     awardsTitle: "Hackathons & concours",
     awards: [
