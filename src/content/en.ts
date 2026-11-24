@@ -1,0 +1,414 @@
+import type { PortfolioContent } from "./types"
+
+/**
+ * Sources: git history of the projects below, the CV, and the recommendation letter
+ * from the Technical Lead of Solar Transit Ltd (18 Nov 2026).
+ */
+export const en: PortfolioContent = {
+  hero: {
+    availability: "Available from January 2027 · missions & full-time roles",
+    title: "I build reliable SaaS and marketplace platforms, from database to interface.",
+    summary:
+      "I'm Mario, a full-stack engineer with three and a half years of production experience. I have shipped features for a solar-energy group's simulation, rental and marketplace products, an e-learning marketplace and an online auction platform, with Next.js, Angular, NestJS, Fastify and Laravel.",
+    location: "Antananarivo, Madagascar · Remote (UTC+3)",
+    primaryCta: "Start a project",
+    secondaryCta: "Download CV",
+  },
+  stats: [
+    { value: "3.5 yrs", label: "building production software" },
+    { value: "4", label: "live platforms I've shipped features to" },
+    { value: "6", label: "hackathon & competition podiums" },
+  ],
+  about: {
+    eyebrow: "About",
+    title: "Engineer first, product-minded always.",
+    paragraphs: [
+      "Since May 2023 I've worked at the Ivato branch of Solar Transit Ltd, building commercial and technical software for a Mauritius-based solar-energy group: a paid solar simulator, a solar-leasing customer journey, a supplier marketplace, an internal ERP and the shared platform services behind them.",
+      "Alongside that, I delivered Akademika.mg, an e-learning marketplace for Madagascar, as a freelance mission. Since October 2026 I've been a partner at Pyxis, the company behind Lavanty.online, Madagascar's online auction marketplace.",
+      "I'm completing the eBIHAR Master's in AI & Big Data (ESTIA). I use AI-assisted development every day, as an accelerator, never as a substitute for design, tests and review.",
+    ],
+    pillarsTitle: "Why teams work with me",
+    pillars: [
+      {
+        title: "End-to-end ownership",
+        description:
+          "I take a feature from schema to API, interface and deployment, and write the spec and tests that keep it maintainable.",
+      },
+      {
+        title: "Business logic that holds up",
+        description:
+          "Lead-to-payment flows, commissions, wallets, multi-currency pricing, KYC and disputes: the commercial rules SaaS products and marketplaces live on.",
+      },
+      {
+        title: "Performance & reliability",
+        description:
+          "Moving work from client to server, caching results, atomic database updates and integration tests that lock in behaviour before a refactor.",
+      },
+      {
+        title: "Security by default",
+        description:
+          "Brute-force lockouts, safe redirects, session revocation, rate limits and httpOnly-cookie auth are part of the job, not an afterthought.",
+      },
+    ],
+  },
+  services: {
+    eyebrow: "Services",
+    title: "How I can help",
+    intro:
+      "As an extra senior pair of hands in your team, or as the engineer who takes your product from idea to production.",
+    items: [
+      {
+        title: "Full-stack web applications",
+        description:
+          "Production-ready apps with Next.js or Angular on the front end and Node.js (NestJS, Fastify) or Laravel on the back end.",
+      },
+      {
+        title: "SaaS & marketplace features",
+        description:
+          "Subscriptions and seat limits, payments and commissions, referral programs, reviews and rankings, admin back offices and support tooling.",
+      },
+      {
+        title: "APIs & integrations",
+        description:
+          "Validated, documented REST APIs, and integrations such as CRM analytics (Odoo), transactional email, PDF generation, maps and file storage.",
+      },
+      {
+        title: "Performance, security & maintenance",
+        description:
+          "Hardening existing apps: slow pages, heavy queries, authentication weaknesses and missing tests, fixed and documented.",
+      },
+      {
+        title: "Cross-platform mobile apps",
+        description: "Ionic and Capacitor apps that share code and APIs with your web platform.",
+      },
+    ],
+    processTitle: "How I work",
+    process: [
+      {
+        title: "Discover",
+        description:
+          "We clarify goals, users and constraints. I ask the questions that surface hidden complexity early.",
+      },
+      {
+        title: "Specify",
+        description:
+          "A short functional spec with acceptance criteria, so we agree on what “done” means before coding.",
+      },
+      {
+        title: "Build & test",
+        description:
+          "Small, reviewable iterations with automated tests on critical paths and regular demos.",
+      },
+      {
+        title: "Ship & support",
+        description: "Deployment, documentation and follow-up once real users arrive.",
+      },
+    ],
+  },
+  experience: {
+    eyebrow: "Experience",
+    title: "Where I've been building",
+    items: [
+      {
+        id: "pyxis",
+        company: "Pyxis",
+        role: "Partner & full-stack engineer",
+        location: "Antananarivo · Remote",
+        summary:
+          "Pyxis is the company behind Lavanty.online, Madagascar's online auction marketplace.",
+        highlights: [
+          "Built Lavanty's integrated support system: tickets, private attachments, agent assignment, quick replies, screenshot capture and phishing-safe links.",
+          "Moved bid guarantees behind a Strategy pattern so auctions can switch between deposit-backed and KYC-only bidding, even mid-auction, covered by 600+ lines of integration tests.",
+          "Hardened authentication with escalating PIN lockout, open-redirect protection and server-side session revocation.",
+          "Delivered the bilingual Pyxis website on Next.js 16, with Playwright and axe accessibility checks across 16 viewport widths.",
+        ],
+      },
+      {
+        id: "solar-transit",
+        company: "Solar Transit Ltd (FINAMAD)",
+        role: "Full-stack developer",
+        location: "Ivato, Madagascar",
+        summary:
+          "Commercial and technical software for a Mauritius-based solar-energy group: sales operations, solar simulation, marketplaces and customer journeys.",
+        highlights: [
+          "PVGIS paid solar simulator: multi-currency, multilingual and right-to-left support, SEO sitemaps, simulations on customers' behalf and result caching.",
+          "Solar Rent: electricity-bill validation at registration, lead-to-customer tracking and appointments with real-time notifications; co-developed the business and enterprise editions.",
+          "SFER ERP: lead-to-payment workflows, automated and bulk lead allocation, daily reminder emails, reporting and faster search and counts.",
+          "Solar Advisor marketplace: supplier and product pages, reviews and favourites, and a NestJS API that ranks suppliers by continent.",
+          "Platform foundations: multi-tenant seat limits, secure admin support access, referrals, Odoo CRM analytics and auditable data synchronisation with recovery.",
+        ],
+      },
+      {
+        id: "akademika",
+        company: "Akademika.mg",
+        role: "Full-stack developer · freelance mission",
+        location: "Antananarivo · Remote",
+        summary: "An e-learning marketplace where Malagasy trainers sell courses priced in Ariary.",
+        highlights: [
+          "Created the NestJS back end and a reusable TypeORM query layer: filters, nested relations, field selection and sorting.",
+          "Built course progress tracking computed with SQL views, and the complete quiz system: builder, grading, attempts and retry modes.",
+          "Implemented commerce: transactional checkout, coupons, HMAC-signed affiliate links, instructor commissions and Mobile Money order review.",
+        ],
+      },
+      {
+        id: "mahomby",
+        company: "Mahomby",
+        role: "Full-stack developer intern",
+        location: "Antananarivo",
+        summary: "First professional project, from data model to deployment.",
+        highlights: [
+          "Designed and built the MongoDB data model.",
+          "Built the user interface with Angular and Ionic, and the REST API with Node.js and Express.",
+          "Handled the deployment on Render.",
+        ],
+      },
+    ],
+  },
+  projects: {
+    eyebrow: "Projects",
+    title: "Selected work",
+    intro:
+      "Products I've built or contributed to in production. Open a project to see exactly what I worked on.",
+    items: [
+      {
+        id: "lavanty",
+        name: "Lavanty.online",
+        category: "Online auction marketplace",
+        role: "Partner · full-stack engineer",
+        summary:
+          "Madagascar's online auction marketplace: live auctions with automatic bidding, verified identities and a guided handover between buyers and sellers.",
+        highlights: [
+          "Integrated support system (Fastify, MongoDB, Next.js): tickets, private attachments, agent assignment, quick replies, screenshot capture and link rendering that blocks phishing patterns.",
+          "Bid-guarantee Strategy pattern: switch between deposit-backed and KYC-only bidding, even mid-auction, pinned down by 600+ lines of integration tests.",
+          "Authentication hardening: escalating PIN lockout, open-redirect protection, server-side logout and session replacement per browser.",
+          "Race-free daily AI quotas and referral rewards using atomic MongoDB updates and per-account serialised, retryable processing.",
+          "Accent-insensitive, ranked listing search, and rate-limited seller lookup to prevent enumeration.",
+          "Dispute and arbitration flows: buyer no-show sanctions, offer to the second bidder, idempotent dispute opening.",
+        ],
+      },
+      {
+        id: "akademika",
+        name: "Akademika.mg",
+        category: "E-learning marketplace",
+        role: "Full-stack developer · freelance",
+        summary:
+          "A Udemy-style platform for Madagascar: trainers publish courses priced in Ariary, learners follow them with progress tracking, quizzes and certificates.",
+        highlights: [
+          "Authored about two-thirds of the project's commits and created its NestJS back end.",
+          "Reusable TypeORM query engine: around fourteen filter operators, nested joins, GraphQL-like field selection and nested sorting.",
+          "Course progress computed by SQL views instead of counters that can drift, and quizzes locked until the course is completed.",
+          "Complete quiz system: teacher-side builder, multiple-choice grading against a pass mark, limited attempts and feedback modes.",
+          "Commerce: transactional checkout, coupons, HMAC-signed affiliate links, per-instructor commission splits and Mobile Money order review.",
+          "Admin back office, httpOnly-cookie JWT sessions, role-based UI and SEO metadata.",
+        ],
+      },
+      {
+        id: "pvgis",
+        name: "PVGIS24 · pvgis.com",
+        category: "Solar simulation SaaS",
+        role: "Full-stack developer · Solar Transit",
+        summary:
+          "A photovoltaic simulation platform for solar professionals and homeowners, with production estimates, financial analysis, PDF reports and paid subscriptions.",
+        highlights: [
+          "Multi-currency pricing.",
+          "Multilingual interface with right-to-left language support.",
+          "SEO sitemaps.",
+          "Simulations created on customers' behalf.",
+          "Caching of simulation results.",
+        ],
+        note: "As described in my Technical Lead's recommendation letter.",
+      },
+      {
+        id: "solar-rent",
+        name: "Solar Rent",
+        category: "Solar leasing platform · Mauritius",
+        role: "Full-stack developer · Solar Transit",
+        summary:
+          "Solar leasing with full maintenance: customers request a personalised study, sign up and follow their solar project online.",
+        highlights: [
+          "Electricity-bill (CEB) validation during registration.",
+          "Lead-to-customer progress tracking.",
+          "Appointment management with real-time notifications.",
+          "Co-developed the business and enterprise editions.",
+        ],
+        note: "As described in my Technical Lead's recommendation letter.",
+      },
+      {
+        id: "solar-advisor",
+        name: "Solar Advisor",
+        category: "Solar products & suppliers marketplace",
+        role: "Full-stack developer · Solar Transit",
+        summary:
+          "A marketplace to compare solar panels, inverters and suppliers, with reviews, rankings and project simulations.",
+        highlights: [
+          "NestJS ranking API: suppliers ranked by continent from approved reviews, with a minimum-review threshold and tie-aware ranking.",
+          "Review summaries (averages, star breakdowns, top tags) and rating fields on product listings via TypeORM virtual columns.",
+          "Moved review filtering and sorting from the browser to the server.",
+          "Favourites, slug-based URLs, supplier and product pages (Laravel, Livewire).",
+          "Solar projects with a Google Maps satellite picker and multi-page PDF reports rendered with Gotenberg.",
+          "Account lifecycle: scheduled deletion, encrypted reactivation links and split customer/admin subdomains.",
+        ],
+      },
+      {
+        id: "sfer",
+        name: "SFER ERP",
+        category: "Internal ERP & sales pipeline",
+        role: "Full-stack developer · Solar Transit",
+        summary: "The internal tool that runs the sales pipeline, from lead to payment.",
+        highlights: [
+          "Lead-to-payment workflows.",
+          "Automated and bulk lead allocation.",
+          "Daily reminder emails, reporting and charts.",
+          "Performance work: lazy loading, faster search and counts.",
+        ],
+        note: "As described in my Technical Lead's recommendation letter.",
+      },
+      {
+        id: "pyxis-site",
+        name: "pyxis.site",
+        category: "Company website",
+        role: "Partner · front-end",
+        summary: "The bilingual website of Pyxis, the studio behind Lavanty.",
+        highlights: [
+          "Redesigned landing page with typed French and English copy.",
+          "Share images generated at build time and structured data for search engines.",
+          "Playwright test suite covering 16 viewport widths, accessibility (axe), no-JavaScript rendering and reduced motion.",
+        ],
+      },
+    ],
+  },
+  testimonial: {
+    eyebrow: "Recommendation",
+    quotes: [
+      "Mario's contributions demonstrate an appreciation of the full software lifecycle: effective user journeys, commercial functionality, maintainable platform foundations and system performance.",
+      "Rather than treating AI as a substitute for software design, he uses it as a development aid alongside the careful attention to scalability, maintainability and commercial requirements evident in his project contributions.",
+      "I recommend Mario enthusiastically for full-stack software engineering, SaaS platform development and business-systems roles.",
+    ],
+    author: "Arvish Mungur",
+    role: "Technical Lead, Solar Transit Ltd",
+  },
+  skills: {
+    eyebrow: "Skills",
+    title: "Tools I use to ship",
+    groups: [
+      {
+        title: "Front end",
+        items: [
+          "TypeScript",
+          "Next.js",
+          "React",
+          "Angular",
+          "NgRx",
+          "Tailwind CSS",
+          "Livewire",
+          "Alpine.js",
+          "Ionic / Capacitor",
+        ],
+      },
+      {
+        title: "Back end",
+        items: [
+          "Node.js",
+          "NestJS",
+          "Fastify",
+          "Express",
+          "Laravel",
+          "Filament",
+          "FastAPI",
+          "REST APIs",
+          "WebSockets",
+        ],
+      },
+      {
+        title: "Data",
+        items: ["MySQL", "MongoDB", "TypeORM", "SQL views & aggregations", "Zod validation"],
+      },
+      {
+        title: "Quality & delivery",
+        items: [
+          "Vitest",
+          "Playwright",
+          "axe accessibility",
+          "Git & code review",
+          "Vercel",
+          "Render",
+        ],
+      },
+      {
+        title: "Practices",
+        items: [
+          "i18n & RTL",
+          "SEO",
+          "Accessibility",
+          "Web security",
+          "Performance",
+          "Functional specs",
+          "AI-assisted development",
+        ],
+      },
+    ],
+  },
+  education: {
+    eyebrow: "Education",
+    title: "Learning & recognition",
+    items: [
+      {
+        degree: "MSc in Artificial Intelligence & Big Data (eBIHAR Master)",
+        school: "ESTIA, France · via IT University, Madagascar",
+        detail:
+          "Big data engineering, machine & deep learning, AI-powered apps, cloud & cybersecurity.",
+        status: "In progress",
+      },
+      {
+        degree: "Bachelor's degree in Computer Science, Integration & Development",
+        school: "ESTI, Antananarivo",
+      },
+      { degree: "Laravel framework training", school: "NDAO EDEV" },
+    ],
+    awardsTitle: "Hackathons & competitions",
+    awards: [
+      {
+        rank: "1st place",
+        event: "ESTI internal project",
+        project: "Goûteo, an online snack-ordering platform",
+        url: "https://gouteo.vercel.app",
+      },
+      {
+        rank: "1st place",
+        event: "ESTI · PROJ210",
+        date: "Oct 2022",
+        project: "FC-Commerce, a platform to manage and sell continuing-education courses",
+      },
+      {
+        rank: "2nd place",
+        event: "DevFest Hackathon",
+        date: "Nov 2022",
+        project: "A community platform to raise awareness of and report pollution",
+      },
+      {
+        rank: "2nd place",
+        event: "Alliance Voahary Gasy Hackathon",
+        date: "Dec 2022",
+        project: "A mobile app making Malagasy laws easier to access",
+      },
+      {
+        rank: "3rd place",
+        event: "Zah@Geek · Orange Digital Center",
+        date: "Jan 2023",
+        project: "An educational mobile app for children with a parental web app",
+      },
+      {
+        rank: "2nd place",
+        event: "ESTI internal hackathon",
+        date: "Mar 2023",
+        project: "Alterneo, matching work-study students with companies",
+      },
+    ],
+  },
+  contact: {
+    eyebrow: "Contact",
+    title: "Let's build something together",
+    intro:
+      "Tell me about your project or the role you're hiring for. I'm available for missions and full-time positions from January 2027.",
+  },
+}
