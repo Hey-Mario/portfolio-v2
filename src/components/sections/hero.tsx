@@ -30,7 +30,7 @@ export function Hero({ locale, hero, stats, t }: HeroProps) {
 
           <h1 id="hero-title" className="mt-8 max-w-4xl">
             <span className="block font-mono text-sm tracking-wide text-brand">
-              {siteConfig.shortName} · {hero.role}
+              {siteConfig.shortName} · <span className="whitespace-nowrap">{hero.role}</span>
             </span>
             <span className="mt-4 block text-4xl font-semibold tracking-tight text-balance sm:text-5xl lg:text-6xl">
               {hero.title}
@@ -66,14 +66,21 @@ export function Hero({ locale, hero, stats, t }: HeroProps) {
         </div>
 
         {siteConfig.headshot && (
-          <Image
-            src={siteConfig.headshot}
-            alt={siteConfig.name}
-            width={320}
-            height={400}
-            priority
-            className="mx-auto aspect-4/5 w-64 rounded-2xl object-cover ring-1 ring-border lg:w-80"
-          />
+          <div className="relative order-first mx-auto w-40 sm:w-48 lg:order-none lg:mr-4 lg:w-80">
+            <div
+              aria-hidden
+              className="absolute inset-0 translate-x-3 translate-y-3 rounded-2xl border border-brand/40 bg-brand/5 lg:translate-x-4 lg:translate-y-4"
+            />
+            <Image
+              src={siteConfig.headshot}
+              alt={siteConfig.shortName}
+              width={800}
+              height={1000}
+              priority
+              sizes="(min-width: 1024px) 320px, (min-width: 640px) 192px, 160px"
+              className="relative aspect-4/5 w-full rounded-2xl object-cover shadow-sm ring-1 ring-border"
+            />
+          </div>
         )}
       </div>
 

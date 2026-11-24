@@ -8,7 +8,7 @@ export const siteConfig = {
   email: "lovamanitramario@gmail.com",
   phone: "+261 36 17 007 07",
   /** Path under /public, or null to render the hero without a portrait. */
-  headshot: null as string | null,
+  headshot: "/images/headshot.webp" as string | null,
   links: {
     github: "https://github.com/Hey-Mario",
     linkedin: null as string | null,

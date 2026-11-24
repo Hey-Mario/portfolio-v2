@@ -53,6 +53,7 @@ export function personJsonLd(locale: Locale, content: PortfolioContent) {
     url: `${siteConfig.url}/${locale}`,
     email: `mailto:${siteConfig.email}`,
     jobTitle: content.hero.role,
+    ...(siteConfig.headshot ? { image: `${siteConfig.url}${siteConfig.headshot}` } : {}),
     description: content.hero.summary,
     address: { "@type": "PostalAddress", addressLocality: "Antananarivo", addressCountry: "MG" },
     sameAs: [links.github, links.linkedin].filter(Boolean),

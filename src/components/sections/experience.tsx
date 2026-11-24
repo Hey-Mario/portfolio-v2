@@ -1,4 +1,5 @@
 import { ExternalLink } from "@/components/shared/external-link"
+import { LinkedText } from "@/components/shared/linked-text"
 import { Section } from "@/components/shared/section"
 import { TechList } from "@/components/shared/tech-list"
 import { experienceMeta } from "@/content/meta"
@@ -10,10 +11,12 @@ import { formatPeriod } from "@/lib/format"
 type ExperienceProps = {
   locale: Locale
   experience: PortfolioContent["experience"]
+  /** Domain → URL map; matching domains in highlights become links. */
+  links: Record<string, string>
   t: Messages
 }
 
-export function Experience({ locale, experience, t }: ExperienceProps) {
+export function Experience({ locale, experience, links, t }: ExperienceProps) {
   return (
     <Section id="experience" eyebrow={experience.eyebrow} title={experience.title}>
       <ol className="space-y-16">
@@ -48,7 +51,7 @@ export function Experience({ locale, experience, t }: ExperienceProps) {
                       key={highlight}
                       className="relative pl-5 leading-relaxed before:absolute before:top-[0.7em] before:left-0 before:size-1.5 before:rounded-full before:bg-brand/70"
                     >
-                      {highlight}
+                      <LinkedText text={highlight} links={links} newTabLabel={t.common.newTab} />
                     </li>
                   ))}
                 </ul>
