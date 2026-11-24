@@ -120,6 +120,7 @@ export const fr: PortfolioContent = {
           "Garanties d'enchère placées derrière un pattern Strategy pour basculer entre enchères avec caution et enchères avec KYC seul, même en cours d'enchère, couvert par plus de 600 lignes de tests d'intégration.",
           "Renforcement de l'authentification : verrouillage progressif du code PIN, protection contre les redirections ouvertes et révocation des sessions côté serveur.",
           "Amélioration de l'outil interne de gestion des tâches de l'équipe commerciale : duplication des tâches, suivi des résultats et permissions.",
+          "Réalisation du site bilingue (français/anglais) de Pyxis sous Next.js 16, avec des tests Playwright et d'accessibilité axe sur 16 largeurs d'écran.",
         ],
       },
       {

@@ -122,6 +122,7 @@ export const en: PortfolioContent = {
           "Moved bid guarantees behind a Strategy pattern so auctions can switch between deposit-backed and KYC-only bidding, even mid-auction, covered by 600+ lines of integration tests.",
           "Hardened authentication with escalating PIN lockout, open-redirect protection and server-side session revocation.",
           "Improved the internal task-management tool used by the sales team: task duplication, outcome tracking and permissions.",
+          "Built the bilingual (French/English) Pyxis company website on Next.js 16, with Playwright and axe accessibility checks across 16 viewport widths.",
         ],
       },
       {
