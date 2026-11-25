@@ -26,7 +26,7 @@ export function Hero({ locale, hero, stats, t }: HeroProps) {
       <div aria-hidden className="absolute inset-0 -z-20 hero-glow" />
       <div aria-hidden className="absolute inset-0 -z-10 grid-fade" />
 
-      <div className="container-page pt-10 pb-14 sm:pt-16 sm:pb-20 lg:pt-20 lg:pb-24">
+      <div className="container-page pt-10 sm:pt-16 lg:pt-20">
         <div className="grid items-center gap-10 lg:grid-cols-[1fr_auto] lg:gap-16">
           <div>
             <div className="flex items-center gap-3">
@@ -119,7 +119,7 @@ export function Hero({ locale, hero, stats, t }: HeroProps) {
           )}
         </div>
 
-        <dl className="mt-10 grid grid-cols-3 divide-x divide-border/60 border-y border-border/60 sm:mt-14 lg:mt-16">
+        <dl className="mt-10 grid grid-cols-3 divide-x divide-border/60 border-t border-border/60 sm:mt-14 lg:mt-16">
           {stats.map((stat) => (
             <div
               key={stat.label}

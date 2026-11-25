@@ -16,7 +16,7 @@ export const fr: PortfolioContent = {
   stats: [
     { value: "+3,5 ans", label: "à développer des logiciels en production" },
     { value: "+10", label: "plateformes en ligne auxquelles j'ai contribué" },
-    { value: "6", label: "podiums en hackathons et concours" },
+    { value: "4", label: "podiums en hackathons et concours" },
   ],
   about: {
     eyebrow: "À propos",
@@ -399,12 +399,6 @@ export const fr: PortfolioContent = {
     awards: [
       {
         rank: "1re place",
-        event: "Projet interne ESTI",
-        project: "Goûteo, une plateforme de commande de goûters en ligne",
-        url: "https://gouteo.vercel.app",
-      },
-      {
-        rank: "1re place",
         event: "ESTI · PROJ210",
         date: "oct. 2022",
         project: "FC-Commerce, une plateforme de gestion et de vente de formations continues",
@@ -427,12 +421,6 @@ export const fr: PortfolioContent = {
         event: "Zah@Geek · Orange Digital Center",
         date: "janv. 2023",
         project: "Une application mobile éducative pour enfants avec une application web parentale",
-      },
-      {
-        rank: "2e place",
-        event: "Hackathon interne ESTI",
-        date: "mars 2023",
-        project: "Alterneo, la mise en relation d'étudiants en alternance et d'entreprises",
       },
     ],
   },

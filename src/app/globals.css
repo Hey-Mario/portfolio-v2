@@ -136,6 +136,8 @@
   html {
     @apply scroll-pt-20 font-sans;
     scroll-behavior: smooth;
+    /* No rubber-band bounce at the top/bottom: it made the fixed progress bar jitter on mobile. */
+    overscroll-behavior-y: none;
   }
   body {
     /* Horizontal slide-ins must never create a sideways scrollbar. */
@@ -243,6 +245,10 @@
 /* Thin brand-coloured progress bar tied to the page scroll. */
 @utility scroll-progress {
   transform: scaleX(0);
+  /* Own compositor layer + no touch handling, so mobile URL-bar resizing and
+     rubber-band scrolling can't make the fixed bar flicker or jump. */
+  will-change: transform;
+  pointer-events: none;
   @media (prefers-reduced-motion: no-preference) {
     @supports (animation-timeline: scroll()) {
       animation: grow-x linear both;

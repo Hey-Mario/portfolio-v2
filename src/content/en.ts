@@ -19,7 +19,7 @@ export const en: PortfolioContent = {
   stats: [
     { value: "3.5+ yrs", label: "building production software" },
     { value: "10+", label: "live platforms I've worked on" },
-    { value: "6", label: "hackathon & competition podiums" },
+    { value: "4", label: "hackathon & competition podiums" },
   ],
   about: {
     eyebrow: "About",
@@ -400,12 +400,6 @@ export const en: PortfolioContent = {
     awards: [
       {
         rank: "1st place",
-        event: "ESTI internal project",
-        project: "Goûteo, an online snack-ordering platform",
-        url: "https://gouteo.vercel.app",
-      },
-      {
-        rank: "1st place",
         event: "ESTI · PROJ210",
         date: "Oct 2022",
         project: "FC-Commerce, a platform to manage and sell continuing-education courses",
@@ -427,12 +421,6 @@ export const en: PortfolioContent = {
         event: "Zah@Geek · Orange Digital Center",
         date: "Jan 2023",
         project: "An educational mobile app for children with a parental web app",
-      },
-      {
-        rank: "2nd place",
-        event: "ESTI internal hackathon",
-        date: "Mar 2023",
-        project: "Alterneo, matching work-study students with companies",
       },
     ],
   },
