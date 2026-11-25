@@ -1,10 +1,17 @@
-import { AwardIcon, GraduationCapIcon } from "lucide-react"
+import { AwardIcon, GraduationCapIcon, MedalIcon } from "lucide-react"
 
 import { ExternalLink } from "@/components/shared/external-link"
 import { Section } from "@/components/shared/section"
 import { Badge } from "@/components/ui/badge"
 import type { PortfolioContent } from "@/content/types"
 import type { Messages } from "@/i18n/messages/en"
+
+const medalTone = (rank: string) =>
+  rank.startsWith("1")
+    ? "bg-amber-400/20 text-amber-600 dark:text-amber-400"
+    : rank.startsWith("2")
+      ? "bg-slate-400/20 text-slate-600 dark:text-slate-300"
+      : "bg-orange-500/20 text-orange-700 dark:text-orange-400"
 
 type EducationProps = { education: PortfolioContent["education"]; t: Messages }
 
@@ -46,9 +53,18 @@ export function Education({ education, t }: EducationProps) {
               <li
                 key={award.project}
                 data-animate="fadeInRight"
-                className="grid grid-cols-[5.5rem_1fr] gap-4 py-4 reveal"
+                className="grid grid-cols-[3.25rem_1fr] items-start gap-4 py-4 reveal"
               >
-                <span className="text-sm font-semibold text-brand">{award.rank}</span>
+                <span className="flex flex-col items-center gap-1">
+                  <span
+                    className={`grid size-10 place-items-center rounded-full ${medalTone(award.rank)}`}
+                  >
+                    <MedalIcon aria-hidden className="size-5" />
+                  </span>
+                  <span className="text-[0.7rem] leading-none font-semibold whitespace-nowrap">
+                    {award.rank}
+                  </span>
+                </span>
                 <div className="text-sm">
                   <p className="font-medium">
                     {award.event}

@@ -1,3 +1,5 @@
+import { ChevronDownIcon } from "lucide-react"
+
 import { ExternalLink } from "@/components/shared/external-link"
 import { LinkedText } from "@/components/shared/linked-text"
 import { Section } from "@/components/shared/section"
@@ -7,6 +9,8 @@ import type { PortfolioContent } from "@/content/types"
 import type { Locale } from "@/i18n/config"
 import type { Messages } from "@/i18n/messages/en"
 import { formatPeriod } from "@/lib/format"
+
+const VISIBLE = 2
 
 type ExperienceProps = {
   locale: Locale
@@ -58,7 +62,7 @@ export function Experience({ locale, experience, links, t }: ExperienceProps) {
                   <p className="mt-0.5 text-sm text-muted-foreground">{item.location}</p>
                   <p className="mt-4 text-pretty">{item.summary}</p>
                   <ul className="mt-4 space-y-2.5 text-pretty text-muted-foreground">
-                    {item.highlights.map((highlight) => (
+                    {item.highlights.slice(0, VISIBLE).map((highlight) => (
                       <li
                         key={highlight}
                         className="relative pl-5 leading-relaxed before:absolute before:top-[0.7em] before:left-0 before:size-1.5 before:rounded-full before:bg-brand/70"
@@ -67,6 +71,31 @@ export function Experience({ locale, experience, links, t }: ExperienceProps) {
                       </li>
                     ))}
                   </ul>
+                  {item.highlights.length > VISIBLE && (
+                    <details className="group mt-3">
+                      <summary className="inline-flex cursor-pointer items-center gap-1 text-sm font-medium text-brand marker:content-none">
+                        {t.common.details}
+                        <ChevronDownIcon
+                          aria-hidden
+                          className="size-4 transition-transform group-open:rotate-180"
+                        />
+                      </summary>
+                      <ul className="mt-3 space-y-2.5 text-pretty text-muted-foreground">
+                        {item.highlights.slice(VISIBLE).map((highlight) => (
+                          <li
+                            key={highlight}
+                            className="relative pl-5 leading-relaxed before:absolute before:top-[0.7em] before:left-0 before:size-1.5 before:rounded-full before:bg-brand/70"
+                          >
+                            <LinkedText
+                              text={highlight}
+                              links={links}
+                              newTabLabel={t.common.newTab}
+                            />
+                          </li>
+                        ))}
+                      </ul>
+                    </details>
+                  )}
                   <TechList items={meta.stack} className="mt-5" />
                 </div>
               </li>

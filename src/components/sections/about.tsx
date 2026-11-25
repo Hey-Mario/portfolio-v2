@@ -8,28 +8,38 @@ const pillarIcons = [LayersIcon, BriefcaseIcon, GaugeIcon, ShieldCheckIcon]
 export function About({ about }: { about: PortfolioContent["about"] }) {
   return (
     <Section id="about" eyebrow={about.eyebrow} title={about.title}>
-      <div className="grid gap-12 lg:grid-cols-[1.1fr_1fr] lg:gap-16">
-        <div
-          data-animate="fadeInLeft"
-          className="space-y-4 text-base leading-relaxed text-pretty text-muted-foreground reveal sm:space-y-5 sm:text-lg"
-        >
+      <div className="grid gap-10 lg:grid-cols-[1fr_1.2fr] lg:gap-16">
+        <ul data-animate="fadeInLeft" className="space-y-3 reveal">
           {about.paragraphs.map((paragraph) => (
-            <p key={paragraph}>{paragraph}</p>
+            <li
+              key={paragraph}
+              className="relative border-l-2 border-brand/50 pl-4 leading-relaxed text-pretty text-muted-foreground sm:text-lg"
+            >
+              {paragraph}
+            </li>
           ))}
-        </div>
+        </ul>
 
         <div>
           <h3 className="text-sm font-semibold tracking-wide text-foreground reveal">
             {about.pillarsTitle}
           </h3>
-          <ul className="mt-6 grid gap-6 sm:grid-cols-2">
+          <ul className="mt-5 grid grid-cols-2 gap-3 sm:gap-4">
             {about.pillars.map((pillar, index) => {
               const Icon = pillarIcons[index % pillarIcons.length]
               return (
-                <li key={pillar.title} data-animate="fadeInRight" className="reveal">
-                  <Icon aria-hidden className="size-5 text-brand" />
-                  <h4 className="mt-3 font-semibold">{pillar.title}</h4>
-                  <p className="mt-1.5 text-sm leading-relaxed text-pretty text-muted-foreground">
+                <li
+                  key={pillar.title}
+                  data-animate={index % 2 ? "fadeInRight" : "fadeInUp"}
+                  className="rounded-xl border border-border/80 bg-card p-4 reveal transition duration-300 hover:-translate-y-0.5 hover:border-brand/40 sm:p-5"
+                >
+                  <span className="grid size-10 place-items-center rounded-lg bg-brand/10 text-brand">
+                    <Icon aria-hidden className="size-5" />
+                  </span>
+                  <h4 className="mt-3 text-sm leading-snug font-semibold sm:text-base">
+                    {pillar.title}
+                  </h4>
+                  <p className="mt-1.5 text-xs leading-relaxed text-pretty text-muted-foreground sm:text-sm">
                     {pillar.description}
                   </p>
                 </li>

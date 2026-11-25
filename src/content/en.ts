@@ -11,7 +11,7 @@ export const en: PortfolioContent = {
     title: "I build SaaS and marketplace platforms.",
     highlights: ["SaaS", "marketplace"],
     summary:
-      "I'm Mario, a full-stack engineer with more than three and a half years of production experience. I have shipped features for a solar-energy group's simulation, rental and marketplace products, an e-learning marketplace and an online auction platform, with Next.js, Angular, NestJS, Python and Laravel.",
+      "I'm Mario, a full-stack engineer with 3.5+ years in production. I've shipped features for a solar-energy group's simulation, rental and marketplace products, an e-learning marketplace and an online auction platform, using Next.js, Angular, NestJS, Python and Laravel.",
     location: "Antananarivo, Madagascar · Remote (UTC+3)",
     primaryCta: "Start a project",
     secondaryCta: "Download CV",
@@ -25,31 +25,31 @@ export const en: PortfolioContent = {
     eyebrow: "About",
     title: "Engineer first, product-minded always.",
     paragraphs: [
-      "Since May 2023 I've worked at the Ivato branch of Solar Transit Ltd, building commercial and technical software for a Mauritius-based solar-energy group: a paid solar simulator, a solar-leasing customer journey, a supplier marketplace, an internal ERP and the shared platform services behind them.",
-      "Alongside that, I delivered Akademika.mg, an e-learning marketplace for Madagascar, as a freelance mission. Since October 2026 I've been a partner at Pyxis, the company behind Lavanty.online, Madagascar's online auction marketplace.",
-      "I'm completing the eBIHAR Master's in AI & Big Data (ESTIA). I use AI-assisted development every day, as an accelerator, never as a substitute for design, tests and review.",
+      "Since May 2023 at Solar Transit Ltd (Ivato), I build software for a Mauritius-based solar-energy group: a paid solar simulator, a leasing customer journey, a supplier marketplace and an internal ERP.",
+      "I delivered Akademika.mg, an e-learning marketplace, as a freelance mission. Since October 2026 I'm a partner at Pyxis, the company behind Lavanty.online, Madagascar's online auction marketplace.",
+      "I'm completing an MSc in AI & Big Data (ESTIA). I use AI-assisted development daily as an accelerator, never as a substitute for design, tests and review.",
     ],
     pillarsTitle: "Why teams work with me",
     pillars: [
       {
         title: "End-to-end ownership",
         description:
-          "I take a feature from schema to API, interface and deployment, and write the spec and tests that keep it maintainable.",
+          "From schema to API, interface and deployment, with the specs and tests that keep it maintainable.",
       },
       {
         title: "Business logic that holds up",
         description:
-          "Lead-to-payment flows, commissions, wallets, multi-currency pricing, KYC and disputes: the commercial rules SaaS products and marketplaces live on.",
+          "Lead-to-payment flows, commissions, wallets, multi-currency pricing, KYC and disputes.",
       },
       {
         title: "Performance & reliability",
         description:
-          "Moving work from client to server, caching results, atomic database updates and integration tests that lock in behaviour before a refactor.",
+          "Server-side work, caching, atomic database updates and integration tests before every refactor.",
       },
       {
         title: "Security by default",
         description:
-          "Brute-force lockouts, safe redirects, session revocation, rate limits and httpOnly-cookie auth are part of the job, not an afterthought.",
+          "Brute-force lockouts, safe redirects, session revocation, rate limits and httpOnly-cookie auth.",
       },
     ],
   },
@@ -57,31 +57,31 @@ export const en: PortfolioContent = {
     eyebrow: "Services",
     title: "How I can help",
     intro:
-      "As an extra pair of hands in your team, or as the engineer who takes your product from idea to production.",
+      "Extra hands for your team, or the engineer who takes your product from idea to production.",
     items: [
       {
         title: "Full-stack web applications",
         description:
-          "Production-ready apps with Next.js or Angular on the front end and Node.js (NestJS, Fastify) or Laravel on the back end.",
+          "Production-ready apps: Next.js or Angular front end, NestJS, Fastify or Laravel back end.",
       },
       {
         title: "SaaS & marketplace features",
         description:
-          "Subscriptions and seat limits, payments and commissions, referral programs, reviews and rankings, admin back offices and support tooling.",
+          "Subscriptions and seat limits, payments and commissions, referrals, reviews and rankings, admin back offices.",
       },
       {
         title: "APIs & integrations",
         description:
-          "Validated, documented REST APIs, and integrations such as CRM analytics (Odoo), transactional email, PDF generation, maps and file storage.",
+          "Validated, documented REST APIs, plus Odoo analytics, email, PDF, maps and file storage.",
       },
       {
         title: "Performance, security & maintenance",
         description:
-          "Hardening existing apps: slow pages, heavy queries, authentication weaknesses and missing tests, fixed and documented.",
+          "Slow pages, heavy queries, authentication weaknesses and missing tests: fixed and documented.",
       },
       {
         title: "Cross-platform mobile apps",
-        description: "Ionic and Capacitor apps that share code and APIs with your web platform.",
+        description: "Ionic and Capacitor apps sharing code and APIs with your web app.",
       },
     ],
     processTitle: "How I work",
@@ -89,21 +89,20 @@ export const en: PortfolioContent = {
       {
         title: "Discover",
         description:
-          "We clarify goals, users and constraints. I ask the questions that surface hidden complexity early.",
+          "We clarify goals, users and constraints, and I surface hidden complexity early.",
       },
       {
         title: "Specify",
-        description:
-          "A short functional spec with acceptance criteria, so we agree on what “done” means before coding.",
+        description: "A short spec: agree on what “done” means.",
       },
       {
         title: "Build & test",
         description:
-          "Small, reviewable iterations with automated tests on critical paths and regular demos.",
+          "Small, reviewable iterations, automated tests on critical paths, regular demos.",
       },
       {
         title: "Ship & support",
-        description: "Deployment, documentation and follow-up once real users arrive.",
+        description: "Deployment, docs, follow-up.",
       },
     ],
   },
@@ -116,11 +115,10 @@ export const en: PortfolioContent = {
         company: "Pyxis",
         role: "Partner & full-stack engineer",
         location: "Antananarivo · Remote",
-        summary:
-          "Pyxis is the company behind Lavanty.online, Madagascar's online auction marketplace.",
+        summary: "Company behind Lavanty.online, Madagascar's online auction marketplace.",
         highlights: [
-          "Built Lavanty's integrated support system: tickets, private attachments, agent assignment, quick replies, screenshot capture and phishing-safe links.",
-          "Moved bid guarantees behind a Strategy pattern so auctions can switch between deposit-backed and KYC-only bidding, even mid-auction, covered by 600+ lines of integration tests.",
+          "Built Lavanty's support system: tickets, agents, quick replies, phishing-safe links.",
+          "Switchable bid guarantees (deposit or KYC-only), backed by 600+ lines of tests.",
           "Hardened authentication with escalating PIN lockout, open-redirect protection and server-side session revocation.",
           "Improved the internal task-management tool used by the sales team: task duplication, outcome tracking and permissions.",
           "Built the bilingual (French/English) Pyxis company website on Next.js 16, with Playwright and axe accessibility checks across 16 viewport widths.",
@@ -131,11 +129,10 @@ export const en: PortfolioContent = {
         company: "Solar Transit Ltd (FINAMAD)",
         role: "Full-stack developer",
         location: "Ivato, Madagascar",
-        summary:
-          "Commercial and technical software for a Mauritius-based solar-energy group: sales operations, solar simulation, marketplaces and customer journeys.",
+        summary: "Sales, simulation, marketplaces and customer journeys for a solar-energy group.",
         highlights: [
-          "PVGIS paid solar simulator: multi-currency, multilingual and right-to-left support, SEO sitemaps, simulations on customers' behalf and result caching.",
-          "Solar Rent: electricity-bill validation at registration, lead-to-customer tracking and appointments with real-time notifications; co-developed the business and enterprise editions.",
+          "PVGIS paid simulator: multi-currency, multilingual, RTL, SEO, result caching.",
+          "Solar Rent: bill validation, lead tracking, appointments, live notifications.",
           "SFER ERP: lead-to-payment workflows, automated and bulk lead allocation, daily reminder emails, reporting and faster search and counts.",
           "Solar Advisor marketplace: supplier and product pages, reviews and favourites, and a NestJS API that ranks suppliers by continent.",
           "Platform foundations: multi-tenant seat limits, secure admin support access, referrals, Odoo CRM analytics and auditable data synchronisation with recovery.",
@@ -147,10 +144,10 @@ export const en: PortfolioContent = {
         company: "Akademika.mg",
         role: "Full-stack developer · freelance mission",
         location: "Antananarivo · Remote",
-        summary: "An e-learning marketplace where Malagasy trainers sell courses priced in Ariary.",
+        summary: "E-learning marketplace where trainers sell courses in Ariary.",
         highlights: [
-          "Created the NestJS back end and a reusable TypeORM query layer: filters, nested relations, field selection and sorting.",
-          "Built course progress tracking computed with SQL views, and the complete quiz system: builder, grading, attempts and retry modes.",
+          "Built the NestJS back end and a reusable TypeORM query layer.",
+          "SQL-view progress tracking and a full quiz system.",
           "Built the commerce flow: orders created in a single database transaction, coupons, affiliate links, instructor commissions, and Mobile Money payments that an admin verifies and approves.",
         ],
       },
@@ -159,8 +156,7 @@ export const en: PortfolioContent = {
         company: "Mahomby",
         role: "Full-stack developer intern",
         location: "Antananarivo",
-        summary:
-          "A startup building a mobile app that helps students find universities and apply to them directly.",
+        summary: "Startup app helping students find and apply to universities.",
         highlights: [
           "Designed and built the MongoDB data model.",
           "Built the mobile app interface with Angular and Ionic, and the REST API with Node.js and Express.",
@@ -172,8 +168,7 @@ export const en: PortfolioContent = {
   projects: {
     eyebrow: "Projects",
     title: "Selected work",
-    intro:
-      "Products I've built or contributed to in production. Open a project to see exactly what I worked on.",
+    intro: "Products I've built or contributed to in production.",
     items: [
       {
         id: "lavanty",
@@ -181,7 +176,7 @@ export const en: PortfolioContent = {
         category: "Online auction marketplace",
         role: "Partner · full-stack engineer",
         summary:
-          "Madagascar's online auction marketplace: live auctions with automatic bidding, verified identities and a guided handover between buyers and sellers.",
+          "Madagascar's online auction marketplace: live bidding, verified identities, guided handover.",
         highlights: [
           "Integrated support system (Fastify, MongoDB, Next.js): tickets, private attachments, agent assignment, quick replies, screenshot capture and link rendering that blocks phishing patterns.",
           "Bid-guarantee Strategy pattern: switch between deposit-backed and KYC-only bidding, even mid-auction, pinned down by 600+ lines of integration tests.",
@@ -197,8 +192,7 @@ export const en: PortfolioContent = {
         name: "Akademika.mg",
         category: "E-learning marketplace",
         role: "Full-stack developer · freelance",
-        summary:
-          "A Udemy-style platform for Madagascar: trainers publish courses priced in Ariary, learners follow them with progress tracking, quizzes and certificates.",
+        summary: "A Udemy-style platform for Madagascar: courses in Ariary, quizzes, certificates.",
         highlights: [
           "Authored about two-thirds of the project's commits and created its NestJS back end.",
           "Reusable TypeORM query engine: around fourteen filter operators, nested joins, GraphQL-like field selection and nested sorting.",
@@ -214,7 +208,7 @@ export const en: PortfolioContent = {
         category: "Solar simulation SaaS",
         role: "Full-stack developer · Solar Transit",
         summary:
-          "A photovoltaic simulation platform for solar professionals and homeowners, with production estimates, financial analysis, PDF reports and paid subscriptions.",
+          "Photovoltaic simulation SaaS: production estimates, financial analysis, PDF reports.",
         focus: ["Multi-currency", "i18n & RTL", "SEO", "Caching"],
         highlights: [
           "Multi-currency pricing.",
@@ -231,7 +225,7 @@ export const en: PortfolioContent = {
         category: "Solar leasing platform · Mauritius",
         role: "Full-stack developer · Solar Transit",
         summary:
-          "Solar leasing with full maintenance: customers request a personalised study, sign up and follow their solar project online.",
+          "Solar leasing with full maintenance: request a study, sign up, follow your project.",
         focus: ["Customer onboarding", "Lead tracking", "Appointments", "Real-time notifications"],
         highlights: [
           "Electricity-bill (CEB) validation during registration.",
@@ -246,8 +240,7 @@ export const en: PortfolioContent = {
         name: "Solar Advisor",
         category: "Solar products & suppliers marketplace",
         role: "Full-stack developer · Solar Transit",
-        summary:
-          "A marketplace to compare solar panels, inverters and suppliers, with reviews, rankings and project simulations.",
+        summary: "Compare solar panels, inverters and suppliers: reviews, rankings, simulations.",
         highlights: [
           "NestJS ranking API: suppliers ranked by continent from approved reviews, with a minimum-review threshold and tie-aware ranking.",
           "Review summaries (averages, star breakdowns, top tags) and rating fields on product listings via TypeORM virtual columns.",
@@ -320,8 +313,6 @@ export const en: PortfolioContent = {
     eyebrow: "Recommendation",
     quotes: [
       "Mario's contributions demonstrate an appreciation of the full software lifecycle: effective user journeys, commercial functionality, maintainable platform foundations and system performance.",
-      "Rather than treating AI as a substitute for software design, he uses it as a development aid alongside the careful attention to scalability, maintainability and commercial requirements evident in his project contributions.",
-      "I recommend Mario enthusiastically for full-stack software engineering, SaaS platform development and business-systems roles.",
     ],
     author: "Arvish Mungur",
     role: "Technical Lead, Solar Transit Ltd",
@@ -394,8 +385,7 @@ export const en: PortfolioContent = {
       {
         degree: "MSc in Artificial Intelligence & Big Data (eBIHAR Master)",
         school: "ESTIA, France · via IT University, Madagascar",
-        detail:
-          "Big data engineering, machine & deep learning, AI-powered apps, cloud & cybersecurity.",
+        detail: "Big data, ML & deep learning, AI apps, cloud & cybersecurity.",
         status: "In progress",
       },
       {

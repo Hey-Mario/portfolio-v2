@@ -8,7 +8,7 @@ export const fr: PortfolioContent = {
     title: "Je conçois des plateformes SaaS et marketplaces.",
     highlights: ["SaaS", "marketplaces"],
     summary:
-      "Je suis Mario, ingénieur full-stack avec plus de trois ans et demi d'expérience en production. J'ai livré des fonctionnalités pour les produits de simulation, de location et de marketplace d'un groupe du secteur solaire, une marketplace e-learning et une plateforme d'enchères en ligne, avec Next.js, Angular, NestJS, Python et Laravel.",
+      "Je suis Mario, ingénieur full-stack avec 3,5+ ans d'expérience en production. J'ai livré des fonctionnalités pour les produits de simulation, de location et de marketplace d'un groupe solaire, une marketplace e-learning et une plateforme d'enchères en ligne, avec Next.js, Angular, NestJS, Python et Laravel.",
     location: "Antananarivo, Madagascar · À distance (UTC+3)",
     primaryCta: "Démarrer un projet",
     secondaryCta: "Télécharger le CV",
@@ -22,31 +22,31 @@ export const fr: PortfolioContent = {
     eyebrow: "À propos",
     title: "Ingénieur avant tout, orienté produit toujours.",
     paragraphs: [
-      "Depuis mai 2023, je travaille à l'agence d'Ivato de Solar Transit Ltd, où je développe des logiciels commerciaux et techniques pour un groupe mauricien du secteur solaire : un simulateur solaire payant, un parcours client de location solaire, une marketplace de fournisseurs, un ERP interne et les services de plateforme partagés.",
-      "En parallèle, j'ai réalisé Akademika.mg, une marketplace e-learning pour Madagascar, en mission freelance. Depuis octobre 2026, je suis associé chez Pyxis, la société derrière Lavanty.online, la marketplace d'enchères en ligne de Madagascar.",
-      "Je termine le Master eBIHAR en IA & Big Data (ESTIA). J'utilise le développement assisté par IA au quotidien, comme accélérateur, jamais comme substitut à la conception, aux tests et à la revue de code.",
+      "Depuis mai 2023 chez Solar Transit Ltd (Ivato), je développe les logiciels d'un groupe solaire mauricien : un simulateur solaire payant, un parcours client de location, une marketplace de fournisseurs et un ERP interne.",
+      "J'ai réalisé Akademika.mg, une marketplace e-learning, en mission freelance. Depuis octobre 2026, je suis associé chez Pyxis, la société derrière Lavanty.online, la marketplace d'enchères en ligne de Madagascar.",
+      "Je termine un Master en IA & Big Data (ESTIA). J'utilise le développement assisté par IA au quotidien, comme accélérateur, jamais comme substitut à la conception, aux tests et à la revue.",
     ],
     pillarsTitle: "Pourquoi travailler avec moi",
     pillars: [
       {
         title: "Responsabilité de bout en bout",
         description:
-          "Je mène une fonctionnalité du schéma de données à l'API, à l'interface et au déploiement, avec la spécification et les tests qui la rendent maintenable.",
+          "Du schéma à l'API, l'interface et le déploiement, avec les spécifications et tests qui la rendent maintenable.",
       },
       {
         title: "Une logique métier solide",
         description:
-          "Parcours du lead au paiement, commissions, portefeuilles, tarification multidevise, KYC et litiges : les règles commerciales dont vivent les SaaS et les marketplaces.",
+          "Parcours du lead au paiement, commissions, portefeuilles, tarification multidevise, KYC et litiges.",
       },
       {
         title: "Performance & fiabilité",
         description:
-          "Déplacer les traitements du client vers le serveur, mettre en cache les résultats, utiliser des mises à jour atomiques et des tests d'intégration qui verrouillent le comportement avant un refactoring.",
+          "Traitements côté serveur, cache, mises à jour atomiques et tests d'intégration avant chaque refactoring.",
       },
       {
         title: "Sécurité par défaut",
         description:
-          "Verrouillage anti-force brute, redirections sûres, révocation de sessions, limitation de débit et authentification par cookie httpOnly font partie du travail, pas d'une étape après coup.",
+          "Verrouillage anti-force brute, redirections sûres, révocation de sessions, limitation de débit et cookies httpOnly.",
       },
     ],
   },
@@ -54,32 +54,31 @@ export const fr: PortfolioContent = {
     eyebrow: "Services",
     title: "Comment je peux vous aider",
     intro:
-      "En renfort dans votre équipe, ou comme l'ingénieur qui emmène votre produit de l'idée à la production.",
+      "En renfort de votre équipe, ou l'ingénieur qui mène votre produit de l'idée à la production.",
     items: [
       {
         title: "Applications web full-stack",
         description:
-          "Applications prêtes pour la production avec Next.js ou Angular côté front et Node.js (NestJS, Fastify) ou Laravel côté back.",
+          "Applications prêtes pour la production : front Next.js ou Angular, back NestJS, Fastify ou Laravel.",
       },
       {
         title: "Fonctionnalités SaaS & marketplace",
         description:
-          "Abonnements et limites de sièges, paiements et commissions, parrainage, avis et classements, back-offices et outils de support.",
+          "Abonnements et limites de sièges, paiements et commissions, parrainage, avis et classements, back-offices.",
       },
       {
         title: "API & intégrations",
         description:
-          "API REST validées et documentées, et intégrations : analytique CRM (Odoo), e-mails transactionnels, génération de PDF, cartes et stockage de fichiers.",
+          "API REST validées et documentées, plus analytique Odoo, e-mails, PDF, cartes et stockage de fichiers.",
       },
       {
         title: "Performance, sécurité & maintenance",
         description:
-          "Renforcement d'applications existantes : pages lentes, requêtes lourdes, failles d'authentification et tests manquants, corrigés et documentés.",
+          "Pages lentes, requêtes lourdes, failles d'authentification et tests manquants : corrigés et documentés.",
       },
       {
         title: "Applications mobiles multiplateformes",
-        description:
-          "Applications Ionic et Capacitor qui partagent le code et les API de votre plateforme web.",
+        description: "Apps Ionic et Capacitor qui partagent code et API avec votre web.",
       },
     ],
     processTitle: "Ma façon de travailler",
@@ -87,21 +86,20 @@ export const fr: PortfolioContent = {
       {
         title: "Comprendre",
         description:
-          "Nous clarifions les objectifs, les utilisateurs et les contraintes. Je pose les questions qui révèlent tôt la complexité cachée.",
+          "Nous clarifions objectifs, utilisateurs et contraintes, et je révèle tôt la complexité cachée.",
       },
       {
         title: "Spécifier",
-        description:
-          "Une spécification fonctionnelle courte avec critères d'acceptation, pour s'accorder sur ce que « terminé » veut dire avant de coder.",
+        description: "Une spec courte : s'accorder sur ce que « terminé » veut dire.",
       },
       {
         title: "Construire & tester",
         description:
-          "Des itérations courtes et relisibles, des tests automatisés sur les parcours critiques et des démos régulières.",
+          "Itérations courtes et relisibles, tests automatisés sur les parcours critiques, démos régulières.",
       },
       {
         title: "Livrer & accompagner",
-        description: "Déploiement, documentation et suivi une fois les vrais utilisateurs arrivés.",
+        description: "Déploiement, doc, suivi.",
       },
     ],
   },
@@ -114,11 +112,10 @@ export const fr: PortfolioContent = {
         company: "Pyxis",
         role: "Associé & ingénieur full-stack",
         location: "Antananarivo · À distance",
-        summary:
-          "Pyxis est la société derrière Lavanty.online, la marketplace d'enchères en ligne de Madagascar.",
+        summary: "La société derrière Lavanty.online, marketplace d'enchères de Madagascar.",
         highlights: [
-          "Conception du système de support intégré de Lavanty : tickets, pièces jointes privées, assignation des agents, réponses rapides, capture d'écran et liens protégés contre l'hameçonnage.",
-          "Garanties d'enchère placées derrière un pattern Strategy pour basculer entre enchères avec caution et enchères avec KYC seul, même en cours d'enchère, couvert par plus de 600 lignes de tests d'intégration.",
+          "Système de support de Lavanty : tickets, agents, réponses rapides, liens anti-hameçonnage.",
+          "Garanties d'enchère modulables (caution ou KYC seul), 600+ lignes de tests.",
           "Renforcement de l'authentification : verrouillage progressif du code PIN, protection contre les redirections ouvertes et révocation des sessions côté serveur.",
           "Amélioration de l'outil interne de gestion des tâches de l'équipe commerciale : duplication des tâches, suivi des résultats et permissions.",
           "Réalisation du site bilingue (français/anglais) de Pyxis sous Next.js 16, avec des tests Playwright et d'accessibilité axe sur 16 largeurs d'écran.",
@@ -129,11 +126,10 @@ export const fr: PortfolioContent = {
         company: "Solar Transit Ltd (FINAMAD)",
         role: "Développeur full-stack",
         location: "Ivato, Madagascar",
-        summary:
-          "Logiciels commerciaux et techniques pour un groupe mauricien du secteur solaire : opérations commerciales, simulation solaire, marketplaces et parcours clients.",
+        summary: "Ventes, simulation, marketplaces et parcours clients pour un groupe solaire.",
         highlights: [
-          "Simulateur solaire payant PVGIS : multidevise, multilingue avec prise en charge de l'écriture de droite à gauche, sitemaps SEO, simulations pour le compte des clients et mise en cache des résultats.",
-          "Solar Rent : validation de la facture d'électricité à l'inscription, suivi du lead au client et gestion des rendez-vous avec notifications en temps réel ; co-développement des éditions business et entreprise.",
+          "Simulateur payant PVGIS : multidevise, multilingue, RTL, SEO, cache.",
+          "Solar Rent : validation de facture, suivi des leads, rendez-vous, notifications.",
           "ERP SFER : parcours du lead au paiement, attribution automatique et en masse des leads, e-mails de rappel quotidiens, reporting, recherche et comptages plus rapides.",
           "Marketplace Solar Advisor : pages fournisseurs et produits, avis et favoris, et une API NestJS qui classe les fournisseurs par continent.",
           "Socle de plateforme : limites de sièges multi-tenant, accès support administrateur sécurisé, parrainage, analytique CRM Odoo et synchronisation de données auditable avec reprise sur erreur.",
@@ -145,11 +141,10 @@ export const fr: PortfolioContent = {
         company: "Akademika.mg",
         role: "Développeur full-stack · mission freelance",
         location: "Antananarivo · À distance",
-        summary:
-          "Une marketplace e-learning où les formateurs malgaches vendent des cours en Ariary.",
+        summary: "Marketplace e-learning où les formateurs vendent des cours en Ariary.",
         highlights: [
-          "Création du back-end NestJS et d'une couche de requêtes TypeORM réutilisable : filtres, relations imbriquées, sélection de champs et tris.",
-          "Suivi de progression calculé par des vues SQL, et système de quiz complet : création, notation, tentatives et modes de reprise.",
+          "Back-end NestJS et couche de requêtes TypeORM réutilisable.",
+          "Suivi de progression par vues SQL et système de quiz complet.",
           "Partie commerce : commandes créées dans une seule transaction en base de données, coupons, liens d'affiliation, commissions des formateurs et paiements Mobile Money vérifiés puis validés par un administrateur.",
         ],
       },
@@ -158,8 +153,7 @@ export const fr: PortfolioContent = {
         company: "Mahomby",
         role: "Stagiaire développeur full-stack",
         location: "Antananarivo",
-        summary:
-          "Une startup qui développe une application mobile pour aider les étudiants à trouver des universités et à y postuler directement.",
+        summary: "Appli mobile d'une startup pour trouver une université et y postuler.",
         highlights: [
           "Conception et création du modèle de données MongoDB.",
           "Interface de l'application mobile en Angular et Ionic, API REST en Node.js et Express.",
@@ -171,8 +165,7 @@ export const fr: PortfolioContent = {
   projects: {
     eyebrow: "Projets",
     title: "Réalisations choisies",
-    intro:
-      "Des produits que j'ai construits ou auxquels j'ai contribué en production. Ouvrez un projet pour voir précisément ce sur quoi j'ai travaillé.",
+    intro: "Des produits construits ou auxquels j'ai contribué en production.",
     items: [
       {
         id: "lavanty",
@@ -180,7 +173,7 @@ export const fr: PortfolioContent = {
         category: "Marketplace d'enchères en ligne",
         role: "Associé · ingénieur full-stack",
         summary:
-          "La marketplace d'enchères en ligne de Madagascar : enchères en direct avec enchère automatique, identités vérifiées et remise accompagnée entre acheteurs et vendeurs.",
+          "Enchères en direct, identités vérifiées, remise accompagnée entre acheteur et vendeur.",
         highlights: [
           "Système de support intégré (Fastify, MongoDB, Next.js) : tickets, pièces jointes privées, assignation des agents, réponses rapides, capture d'écran et affichage des liens qui bloque les motifs d'hameçonnage.",
           "Pattern Strategy pour les garanties d'enchère : bascule entre caution et KYC seul, même en cours d'enchère, verrouillée par plus de 600 lignes de tests d'intégration.",
@@ -196,8 +189,7 @@ export const fr: PortfolioContent = {
         name: "Akademika.mg",
         category: "Marketplace e-learning",
         role: "Développeur full-stack · freelance",
-        summary:
-          "Une plateforme à la Udemy pour Madagascar : les formateurs publient des cours en Ariary, les apprenants les suivent avec progression, quiz et certificats.",
+        summary: "Plateforme à la Udemy pour Madagascar : cours en Ariary, quiz, certificats.",
         highlights: [
           "Auteur d'environ deux tiers des commits du projet et créateur de son back-end NestJS.",
           "Moteur de requêtes TypeORM réutilisable : une quinzaine d'opérateurs de filtre, jointures imbriquées, sélection de champs façon GraphQL et tri imbriqué.",
@@ -213,7 +205,7 @@ export const fr: PortfolioContent = {
         category: "SaaS de simulation solaire",
         role: "Développeur full-stack · Solar Transit",
         summary:
-          "Une plateforme de simulation photovoltaïque pour les professionnels du solaire et les particuliers : estimations de production, analyse financière, rapports PDF et abonnements payants.",
+          "SaaS de simulation photovoltaïque : production, analyse financière, rapports PDF.",
         focus: ["Multidevise", "i18n & RTL", "SEO", "Mise en cache"],
         highlights: [
           "Tarification multidevise.",
@@ -230,7 +222,7 @@ export const fr: PortfolioContent = {
         category: "Plateforme de location solaire · Maurice",
         role: "Développeur full-stack · Solar Transit",
         summary:
-          "La location de panneaux solaires avec maintenance complète : les clients demandent une étude personnalisée, s'inscrivent et suivent leur projet solaire en ligne.",
+          "Location solaire avec maintenance : étude, inscription, suivi du projet en ligne.",
         focus: ["Inscription client", "Suivi des leads", "Rendez-vous", "Notifications temps réel"],
         highlights: [
           "Validation de la facture d'électricité (CEB) à l'inscription.",
@@ -245,8 +237,7 @@ export const fr: PortfolioContent = {
         name: "Solar Advisor",
         category: "Marketplace de produits et fournisseurs solaires",
         role: "Développeur full-stack · Solar Transit",
-        summary:
-          "Une marketplace pour comparer panneaux, onduleurs et fournisseurs solaires, avec avis, classements et simulations de projets.",
+        summary: "Comparez panneaux, onduleurs et fournisseurs : avis, classements, simulations.",
         highlights: [
           "API de classement NestJS : fournisseurs classés par continent à partir des avis approuvés, avec seuil minimal d'avis et gestion des ex æquo.",
           "Synthèses d'avis (moyennes, répartition par étoiles, tags principaux) et notes sur les listes de produits via des colonnes virtuelles TypeORM.",
@@ -319,8 +310,6 @@ export const fr: PortfolioContent = {
     eyebrow: "Recommandation",
     quotes: [
       "Les contributions de Mario témoignent d'une compréhension de l'ensemble du cycle de vie logiciel : des parcours utilisateurs efficaces, des fonctionnalités commerciales, des fondations de plateforme maintenables et la performance des systèmes.",
-      "Plutôt que de considérer l'IA comme un substitut à la conception logicielle, il l'utilise comme une aide au développement, avec l'attention portée à la scalabilité, à la maintenabilité et aux exigences commerciales qu'on retrouve dans ses contributions.",
-      "Je recommande Mario avec enthousiasme pour des postes d'ingénierie logicielle full-stack, de développement de plateformes SaaS et de systèmes métier.",
     ],
     author: "Arvish Mungur",
     role: "Technical Lead, Solar Transit Ltd",
@@ -394,8 +383,7 @@ export const fr: PortfolioContent = {
       {
         degree: "Master of Science en Intelligence Artificielle & Big Data (Master eBIHAR)",
         school: "ESTIA, France · via IT University, Madagascar",
-        detail:
-          "Ingénierie big data, machine & deep learning, applications intégrant l'IA, cloud & cybersécurité.",
+        detail: "Big data, ML & deep learning, apps IA, cloud & cybersécurité.",
         status: "En cours",
       },
       {

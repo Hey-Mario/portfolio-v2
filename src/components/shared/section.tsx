@@ -27,7 +27,7 @@ export function Section({
       id={id}
       aria-labelledby={titleId}
       className={cn(
-        "border-t border-border/60 py-16 sm:py-20 lg:py-24",
+        "border-t border-border/60 py-12 sm:py-20 lg:py-24",
         tone === "muted" && "bg-muted/70",
         className,
       )}

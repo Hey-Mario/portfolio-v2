@@ -241,6 +241,26 @@
    Everything below is progressive enhancement: scroll-driven effects only run
    where supported and never for users who prefer reduced motion. */
 
+/* Endless tool strip under the hero; pauses on hover and stands still for reduced motion. */
+@utility marquee {
+  mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+}
+
+@utility marquee-move {
+  @media (prefers-reduced-motion: no-preference) {
+    animation: marquee 40s linear infinite;
+    &:hover {
+      animation-play-state: paused;
+    }
+  }
+}
+
+@keyframes marquee {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
 /* Thin brand-coloured progress bar tied to the page scroll. */
 @utility scroll-progress {
   transform: scaleX(0);

@@ -4,7 +4,7 @@ import type { Messages } from "@/i18n/messages/en"
 type TestimonialProps = { testimonial: PortfolioContent["testimonial"]; t: Messages }
 
 export function Testimonial({ testimonial, t }: TestimonialProps) {
-  const [lead, ...rest] = testimonial.quotes
+  const [lead] = testimonial.quotes
   const quote = (text: string) => `${t.common.openQuote}${text}${t.common.closeQuote}`
   const initials = testimonial.author
     .split(" ")
@@ -29,13 +29,6 @@ export function Testimonial({ testimonial, t }: TestimonialProps) {
           <p className="max-w-4xl text-xl leading-snug font-medium tracking-tight text-balance sm:text-2xl lg:text-3xl">
             {quote(lead)}
           </p>
-          <div className="mt-10 grid gap-8 text-pretty text-muted-foreground md:grid-cols-2">
-            {rest.map((text) => (
-              <p key={text} className="leading-relaxed">
-                {quote(text)}
-              </p>
-            ))}
-          </div>
         </blockquote>
         <figcaption className="mt-10 flex items-center gap-3">
           <span

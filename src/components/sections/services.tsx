@@ -26,13 +26,15 @@ export function Services({ services }: { services: PortfolioContent["services"] 
               key={service.title}
               data-animate={["fadeInLeft", "fadeInUp", "fadeInRight"][index % 3]}
               className={cn(
-                "rounded-xl border border-border/80 bg-card p-6 reveal transition duration-300 hover:-translate-y-0.5 hover:border-brand/40 hover:shadow-md hover:shadow-brand/5 lg:col-span-2",
+                "rounded-xl border border-border/80 bg-card p-5 reveal transition duration-300 hover:-translate-y-0.5 hover:border-brand/40 hover:shadow-md hover:shadow-brand/5 sm:p-6 lg:col-span-2",
                 // A last row of two cards shares the full width instead of leaving a gap.
                 isLastPair(index, services.items.length) && "lg:col-span-3",
                 index === services.items.length - 1 && index % 2 === 0 && "sm:max-lg:col-span-2",
               )}
             >
-              <Icon aria-hidden className="size-5 text-brand" />
+              <span className="grid size-10 place-items-center rounded-lg bg-brand/10 text-brand">
+                <Icon aria-hidden className="size-5" />
+              </span>
               <h3 className="mt-4 font-semibold">{service.title}</h3>
               <p className="mt-2 text-sm leading-relaxed text-pretty text-muted-foreground">
                 {service.description}
@@ -42,17 +44,21 @@ export function Services({ services }: { services: PortfolioContent["services"] 
         })}
       </ul>
 
-      <h3 className="mt-16 text-sm font-semibold tracking-wide reveal sm:mt-20">
+      <h3 className="mt-14 text-sm font-semibold tracking-wide reveal sm:mt-20">
         {services.processTitle}
       </h3>
-      <ol className="mt-6 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+      <ol className="mt-6 grid grid-cols-2 gap-x-4 gap-y-8 lg:grid-cols-4">
         {services.process.map((step, index) => (
-          <li key={step.title} className="border-t-2 border-foreground/80 pt-4 reveal">
-            <span className="font-mono text-xs text-muted-foreground">
-              {String(index + 1).padStart(2, "0")}
+          <li key={step.title} className="relative reveal">
+            <span
+              aria-hidden
+              className="absolute top-5 left-12 hidden h-px w-[calc(100%-2rem)] bg-linear-to-r from-brand/50 to-transparent lg:block"
+            />
+            <span className="grid size-10 place-items-center rounded-full bg-foreground font-mono text-sm font-semibold text-background">
+              {index + 1}
             </span>
-            <h4 className="mt-1 font-semibold">{step.title}</h4>
-            <p className="mt-2 text-sm leading-relaxed text-pretty text-muted-foreground">
+            <h4 className="mt-3 font-semibold">{step.title}</h4>
+            <p className="mt-1 text-sm leading-relaxed text-pretty text-muted-foreground">
               {step.description}
             </p>
           </li>
