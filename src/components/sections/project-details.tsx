@@ -32,7 +32,12 @@ export function ProjectDetails(props: ProjectDetailsProps) {
   return (
     <Sheet>
       <SheetTrigger asChild>
-        <Button variant="outline" size="sm" aria-label={`${labels.details}: ${name}`}>
+        <Button
+          variant="outline"
+          size="sm"
+          className="pointer-coarse:h-11"
+          aria-label={`${labels.details}: ${name}`}
+        >
           {labels.details}
         </Button>
       </SheetTrigger>

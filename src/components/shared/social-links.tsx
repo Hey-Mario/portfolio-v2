@@ -28,7 +28,7 @@ export function SocialLinks({ t, className }: { t: Messages; className?: string 
             {...(external ? { target: "_blank", rel: "noreferrer" } : {})}
             aria-label={external ? `${label} ${t.common.newTab}` : label}
             title={label}
-            className="grid size-9 place-items-center rounded-md text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
+            className="grid size-9 place-items-center rounded-md text-muted-foreground transition-colors hover:bg-muted hover:text-foreground pointer-coarse:size-11"
           >
             <Icon className="size-4" />
           </a>

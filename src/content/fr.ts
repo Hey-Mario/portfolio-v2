@@ -6,25 +6,24 @@ export const fr: PortfolioContent = {
     role: "Ingénieur full-stack",
     availability: "Disponible immédiatement · missions & CDI",
     title: "Je conçois des plateformes SaaS et marketplaces.",
-    highlights: ["SaaS", "marketplaces"],
+    highlights: ["SaaS et marketplaces"],
     summary:
-      "Je suis Mario, ingénieur full-stack avec 3,5+ ans d'expérience en production. J'ai livré des fonctionnalités pour les produits de simulation, de location et de marketplace d'un groupe solaire, une marketplace e-learning et une plateforme d'enchères en ligne, avec Next.js, Angular, NestJS, Python et Laravel.",
+      "Ingénieur full-stack, je livre en production des SaaS, des marketplaces et des plateformes d'enchères, avec Next.js, Angular, NestJS et Laravel.",
     location: "Antananarivo, Madagascar · À distance (UTC+3)",
     primaryCta: "Démarrer un projet",
     secondaryCta: "Télécharger le CV",
   },
   stats: [
     { value: "+3,5 ans", label: "à développer des logiciels en production" },
-    { value: "+10", label: "sites et plateformes en ligne auxquels j'ai contribué" },
+    { value: "+10", label: "plateformes en ligne auxquelles j'ai contribué" },
     { value: "6", label: "podiums en hackathons et concours" },
   ],
   about: {
     eyebrow: "À propos",
     title: "Ingénieur avant tout, orienté produit toujours.",
     paragraphs: [
-      "Depuis mai 2023 chez Solar Transit Ltd (Ivato), je développe les logiciels d'un groupe solaire mauricien : un simulateur solaire payant, un parcours client de location, une marketplace de fournisseurs et un ERP interne.",
-      "J'ai réalisé Akademika.mg, une marketplace e-learning, en mission freelance. Depuis octobre 2026, je suis associé chez Pyxis, la société derrière Lavanty.online, la marketplace d'enchères en ligne de Madagascar.",
-      "Je termine un Master en IA & Big Data (ESTIA). J'utilise le développement assisté par IA au quotidien, comme accélérateur, jamais comme substitut à la conception, aux tests et à la revue.",
+      "Je m'occupe du produit entier, pas seulement du ticket : des specs claires, une logique métier solide, des pages rapides et sûres.",
+      "Je termine un Master en IA & Big Data (ESTIA) et j'utilise le développement assisté par IA au quotidien, comme accélérateur, jamais comme substitut à la conception, aux tests et à la revue.",
     ],
     pillarsTitle: "Pourquoi travailler avec moi",
     pillars: [
@@ -72,9 +71,9 @@ export const fr: PortfolioContent = {
           "API REST validées et documentées, plus analytique Odoo, e-mails, PDF, cartes et stockage de fichiers.",
       },
       {
-        title: "Performance, sécurité & maintenance",
+        title: "Audit & maintenance",
         description:
-          "Pages lentes, requêtes lourdes, failles d'authentification et tests manquants : corrigés et documentés.",
+          "Pages lentes, requêtes lourdes et tests manquants : repérés, corrigés et documentés.",
       },
       {
         title: "Applications mobiles multiplateformes",
@@ -99,7 +98,7 @@ export const fr: PortfolioContent = {
       },
       {
         title: "Livrer & accompagner",
-        description: "Déploiement, doc, suivi.",
+        description: "Déploiement, documentation et suivi après la mise en ligne.",
       },
     ],
   },
@@ -123,9 +122,9 @@ export const fr: PortfolioContent = {
       },
       {
         id: "solar-transit",
-        company: "Solar Transit Ltd (FINAMAD)",
+        company: "Solar Transit Ltd",
         role: "Développeur full-stack",
-        location: "Ivato, Madagascar",
+        location: "Ivato, Madagascar · FINAMAD",
         summary: "Ventes, simulation, marketplaces et parcours clients pour un groupe solaire.",
         highlights: [
           "Simulateur payant PVGIS : multidevise, multilingue, RTL, SEO, cache.",
@@ -170,6 +169,7 @@ export const fr: PortfolioContent = {
       {
         id: "lavanty",
         name: "Lavanty.online",
+        imageAlt: "Page d'accueil de Lavanty.online : enchères en direct à Madagascar",
         category: "Marketplace d'enchères en ligne",
         role: "Associé · ingénieur full-stack",
         summary:
@@ -187,6 +187,7 @@ export const fr: PortfolioContent = {
       {
         id: "akademika",
         name: "Akademika.mg",
+        imageAlt: "Page d'accueil d'Akademika.mg : formations en ligne",
         category: "Marketplace e-learning",
         role: "Développeur full-stack · freelance",
         summary: "Plateforme à la Udemy pour Madagascar : cours en Ariary, quiz, certificats.",
@@ -202,6 +203,7 @@ export const fr: PortfolioContent = {
       {
         id: "pvgis",
         name: "PVGIS24 · pvgis.com",
+        imageAlt: "Calculateur de panneaux solaires PVGIS24 avec carte satellite",
         category: "SaaS de simulation solaire",
         role: "Développeur full-stack · Solar Transit",
         summary:
@@ -219,6 +221,7 @@ export const fr: PortfolioContent = {
       {
         id: "solar-rent",
         name: "Solar Rent",
+        imageAlt: "Page d'accueil de Solar Rent : l'énergie solaire sans risque",
         category: "Plateforme de location solaire · Maurice",
         role: "Développeur full-stack · Solar Transit",
         summary:
@@ -265,6 +268,7 @@ export const fr: PortfolioContent = {
       {
         id: "pyxis-site",
         name: "pyxis.site",
+        imageAlt: "Page d'accueil de Pyxis : le bon produit numérique pour votre métier",
         category: "Site d'entreprise",
         role: "Associé · front-end",
         summary: "Le site bilingue de Pyxis, le studio derrière Lavanty.",
@@ -390,8 +394,6 @@ export const fr: PortfolioContent = {
         degree: "Licence en informatique, parcours Intégration & Développement",
         school: "ESTI, Antananarivo",
       },
-      { degree: "Formation au framework Laravel", school: "NDAO EDEV" },
-      { degree: "Cours d'anglais", school: "ECM English Course Madagascar" },
     ],
     awardsTitle: "Hackathons & concours",
     awards: [
@@ -437,7 +439,6 @@ export const fr: PortfolioContent = {
   contact: {
     eyebrow: "Contact",
     title: "Construisons quelque chose ensemble",
-    intro:
-      "Parlez-moi de votre projet ou du poste que vous proposez. Je suis disponible immédiatement pour des missions et des postes à temps plein.",
+    intro: "Parlez-moi de votre projet ou du poste que vous proposez. Je réponds sous 24 h.",
   },
 }

@@ -15,7 +15,12 @@ export function MobileNav({ items, cv, labels }: MobileNavProps) {
   return (
     <Sheet>
       <SheetTrigger asChild>
-        <Button variant="ghost" size="icon-sm" className="lg:hidden" aria-label={labels.open}>
+        <Button
+          variant="ghost"
+          size="icon-sm"
+          className="lg:hidden pointer-coarse:size-11"
+          aria-label={labels.open}
+        >
           <MenuIcon />
         </Button>
       </SheetTrigger>

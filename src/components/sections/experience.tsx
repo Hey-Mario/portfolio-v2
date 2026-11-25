@@ -26,7 +26,7 @@ export function Experience({ locale, experience, links, t }: ExperienceProps) {
       <div className="relative">
         <span
           aria-hidden
-          className="absolute inset-y-2 left-[calc(13rem+1.25rem)] hidden w-px draw-y bg-border md:block"
+          className="absolute inset-y-2 left-[calc(9rem+1.25rem)] hidden w-px draw-y bg-border md:block"
         />
         <ol className="space-y-12 sm:space-y-16">
           {experience.items.map((item) => {
@@ -34,11 +34,11 @@ export function Experience({ locale, experience, links, t }: ExperienceProps) {
             return (
               <li
                 key={item.id}
-                className="relative grid gap-3 reveal md:grid-cols-[13rem_1fr] md:gap-10"
+                className="relative grid gap-3 reveal md:grid-cols-[9rem_1fr] md:gap-10"
               >
                 <span
                   aria-hidden
-                  className="absolute top-[0.55rem] left-[calc(13rem+1.25rem-0.3125rem)] hidden size-2.5 rounded-full border-2 border-brand bg-background md:block"
+                  className="absolute top-[0.55rem] left-[calc(9rem+1.25rem-0.3125rem)] hidden size-2.5 rounded-full border-2 border-brand bg-background md:block"
                 />
                 <p className="font-mono text-xs tracking-wider text-muted-foreground uppercase md:pt-1.5">
                   {formatPeriod(meta.period, locale, t.common.present)}

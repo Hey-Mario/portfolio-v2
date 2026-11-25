@@ -15,6 +15,8 @@ export type ExperienceMeta = { url?: string; period: Period; stack: string[] }
 
 export type ProjectMeta = {
   url?: string
+  /** Screenshot under /public, captured from the live site. */
+  image?: string
   status: ProjectStatus
   period: Period
   stack: string[]
@@ -58,24 +60,28 @@ export const experienceMeta: Record<ExperienceId, ExperienceMeta> = experiences
 const projects = {
   lavanty: {
     url: "https://lavanty.online",
+    image: "/images/projects/lavanty.webp",
     status: "live",
     period: { start: "2026-10" },
     stack: ["Next.js", "Fastify", "MongoDB", "WebSockets", "Web Push", "Zod", "Vitest"],
   },
   akademika: {
     url: "https://akademika.mg",
+    image: "/images/projects/akademika.webp",
     status: "live",
     period: { start: "2024-09", end: "2025-04" },
     stack: ["Angular 18", "Ionic", "NestJS", "TypeORM", "MySQL", "JWT"],
   },
   pvgis: {
     url: "https://pvgis.com",
+    image: "/images/projects/pvgis.webp",
     status: "live",
     period: { start: "2023-05" },
     stack: [],
   },
   "solar-rent": {
     url: "https://solar-rent.mu",
+    image: "/images/projects/solar-rent.webp",
     status: "live",
     period: { start: "2023-05" },
     stack: [],
@@ -92,6 +98,7 @@ const projects = {
   },
   "pyxis-site": {
     url: "https://pyxis.site",
+    image: "/images/projects/pyxis-site.webp",
     status: "live",
     period: { start: "2026-10", end: "2026-10" },
     stack: ["Next.js 16", "React 19", "Tailwind CSS", "Playwright", "axe-core"],

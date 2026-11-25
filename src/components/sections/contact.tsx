@@ -1,29 +1,20 @@
-import {
-  ArrowUpRightIcon,
-  DownloadIcon,
-  MailIcon,
-  MapPinIcon,
-  MessageCircleIcon,
-} from "lucide-react"
+import { ArrowUpRightIcon, MailIcon, MapPinIcon, MessageCircleIcon } from "lucide-react"
 
 import { GitHubIcon, LinkedInIcon } from "@/components/shared/brand-icons"
 import { Section } from "@/components/shared/section"
-import { Button } from "@/components/ui/button"
 import type { PortfolioContent } from "@/content/types"
-import type { Locale } from "@/i18n/config"
 import type { Messages } from "@/i18n/messages/en"
 import { siteConfig } from "@/lib/site"
 
 import { ContactForm } from "./contact-form"
 
 type ContactProps = {
-  locale: Locale
   contact: PortfolioContent["contact"]
   hero: PortfolioContent["hero"]
   t: Messages
 }
 
-export function Contact({ locale, contact, hero, t }: ContactProps) {
+export function Contact({ contact, hero, t }: ContactProps) {
   const { links } = siteConfig
   const direct = [
     {
@@ -66,15 +57,7 @@ export function Contact({ locale, contact, hero, t }: ContactProps) {
     >
       <div className="grid gap-8 lg:grid-cols-[1fr_1.35fr] lg:gap-14">
         <div data-animate="fadeInLeft" className="reveal">
-          <p className="inline-flex items-center gap-2 rounded-full border border-border/80 bg-card px-3 py-1 text-xs font-medium text-muted-foreground">
-            <span className="relative flex size-2" aria-hidden>
-              <span className="absolute inline-flex size-full animate-ping rounded-full bg-emerald-500 opacity-60 motion-reduce:animate-none" />
-              <span className="relative inline-flex size-2 rounded-full bg-emerald-500" />
-            </span>
-            {hero.availability}
-          </p>
-
-          <h3 className="mt-6 text-sm font-semibold">{t.contactForm.direct}</h3>
+          <h3 className="text-sm font-semibold">{t.contactForm.direct}</h3>
           <ul className="mt-4 grid gap-3">
             {direct.map(({ icon: Icon, title, label, href, external }) => (
               <li key={href}>
@@ -101,12 +84,6 @@ export function Contact({ locale, contact, hero, t }: ContactProps) {
           </ul>
 
           <div className="mt-6 flex flex-wrap items-center gap-x-5 gap-y-3">
-            <Button asChild variant="outline" className="bg-card">
-              <a href={siteConfig.cv[locale]} download>
-                <DownloadIcon />
-                {hero.secondaryCta}
-              </a>
-            </Button>
             <p className="flex items-center gap-2 text-sm text-muted-foreground">
               <MapPinIcon aria-hidden className="size-4 shrink-0" />
               {hero.location}
@@ -116,7 +93,7 @@ export function Contact({ locale, contact, hero, t }: ContactProps) {
 
         <div
           data-animate="fadeInRight"
-          className="relative rounded-2xl border border-border/80 bg-card p-6 reveal shadow-sm sm:p-8"
+          className="relative rounded-2xl border border-border/80 bg-card p-6 reveal shadow-sm sm:p-8 lg:self-start"
         >
           <ContactForm labels={t.contactForm} />
         </div>

@@ -27,6 +27,8 @@ export type ProjectItem = {
   highlights: string[]
   /** Localized focus areas, used instead of a tech stack when the stack isn't public. */
   focus?: string[]
+  /** Describes the screenshot, for projects whose meta has an `image`. */
+  imageAlt?: string
   /** Where the description comes from when it isn't Mario's own commits. */
   note?: string
 }

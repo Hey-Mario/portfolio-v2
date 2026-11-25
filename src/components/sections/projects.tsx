@@ -9,10 +9,13 @@ import {
   type LucideIcon,
 } from "lucide-react"
 
+import Image from "next/image"
+
 import { ExternalLink } from "@/components/shared/external-link"
 import { Section } from "@/components/shared/section"
 import { TechList } from "@/components/shared/tech-list"
 import { Badge } from "@/components/ui/badge"
+import { Button } from "@/components/ui/button"
 import { projectMeta, type ProjectId, type ProjectStatus } from "@/content/meta"
 import type { PortfolioContent } from "@/content/types"
 import type { Locale } from "@/i18n/config"
@@ -53,6 +56,55 @@ function StatusBadge({ status, label }: { status: ProjectStatus; label: string }
   )
 }
 
+/** A screenshot in a light browser frame; projects without a public site get a placeholder. */
+function Screenshot({
+  src,
+  alt,
+  icon: Icon,
+  priority = false,
+  className,
+}: {
+  src?: string
+  alt?: string
+  icon: LucideIcon
+  priority?: boolean
+  className?: string
+}) {
+  return (
+    <div
+      className={cn(
+        "overflow-hidden rounded-xl border border-border/80 bg-muted shadow-sm",
+        className,
+      )}
+    >
+      <div aria-hidden className="flex gap-1.5 border-b border-border/80 bg-card px-3 py-2">
+        <span className="size-2 rounded-full bg-border" />
+        <span className="size-2 rounded-full bg-border" />
+        <span className="size-2 rounded-full bg-border" />
+      </div>
+      <div className="relative aspect-16/10 overflow-hidden">
+        {src ? (
+          <Image
+            src={src}
+            alt={alt ?? ""}
+            fill
+            priority={priority}
+            sizes="(min-width: 1024px) 560px, (min-width: 768px) 45vw, 85vw"
+            className="object-cover object-top transition-transform duration-500 group-hover:scale-[1.02] motion-reduce:transition-none"
+          />
+        ) : (
+          <div
+            aria-hidden
+            className="grid size-full place-items-center bg-linear-to-br from-brand/15 via-brand/5 to-transparent"
+          >
+            <Icon className="size-12 text-brand" strokeWidth={1.5} />
+          </div>
+        )}
+      </div>
+    </div>
+  )
+}
+
 export function Projects({ locale, projects, t }: ProjectsProps) {
   return (
     <Section
@@ -80,60 +132,72 @@ export function Projects({ locale, projects, t }: ProjectsProps) {
                 featured && "md:col-span-2",
               )}
             >
-              <article className="group relative flex h-full flex-col rounded-2xl border border-border/80 bg-card p-6 transition duration-300 hover:border-foreground/25 hover:shadow-lg hover:shadow-foreground/5 sm:p-8">
-                <div className="flex items-center justify-between gap-3">
-                  <p className="flex items-center gap-3 font-mono text-xs tracking-wider text-muted-foreground uppercase">
-                    <span className="text-brand">{String(index + 1).padStart(2, "0")}</span>
-                    <span aria-hidden className="h-px w-6 bg-border" />
-                    <span>{project.category}</span>
+              <article
+                className={cn(
+                  "group relative flex h-full flex-col gap-6 rounded-2xl border border-border/80 bg-card p-6 transition duration-300 hover:border-foreground/25 hover:shadow-lg hover:shadow-foreground/5 sm:p-8",
+                  featured && "md:grid md:grid-cols-[1fr_1.1fr] md:items-center md:gap-10",
+                )}
+              >
+                {!featured && <Screenshot src={meta.image} alt={project.imageAlt} icon={Icon} />}
+                <div className="flex flex-1 flex-col">
+                  <div className="flex items-center justify-between gap-3">
+                    <p className="flex items-center gap-3 font-mono text-xs tracking-wider text-muted-foreground uppercase">
+                      <span className="text-brand">{String(index + 1).padStart(2, "0")}</span>
+                      <span aria-hidden className="h-px w-6 bg-border" />
+                      <span>{project.category}</span>
+                    </p>
+                    <StatusBadge status={meta.status} label={t.status[meta.status]} />
+                  </div>
+                  <h3
+                    className={cn(
+                      "mt-6 flex items-center gap-3 text-xl font-semibold tracking-tight sm:text-2xl",
+                      featured && "md:text-3xl",
+                    )}
+                  >
+                    <Icon aria-hidden className="size-5 shrink-0 text-brand" />
+                    {project.name}
+                  </h3>
+                  <p className="mt-1 text-sm text-muted-foreground">{project.role}</p>
+                  <p
+                    className={cn(
+                      "mt-4 flex-1 leading-relaxed text-pretty text-muted-foreground",
+                      featured && "max-w-3xl",
+                    )}
+                  >
+                    {project.summary}
                   </p>
-                  <StatusBadge status={meta.status} label={t.status[meta.status]} />
+                  <div className="mt-6 border-t border-border/60 pt-5">
+                    <TechList items={tags} plain={!!project.focus} />
+                  </div>
+                  <div className="mt-5 flex flex-wrap items-center gap-4">
+                    <ProjectDetails
+                      name={project.name}
+                      category={project.category}
+                      role={project.role}
+                      period={formatPeriod(meta.period, locale, t.common.present)}
+                      summary={project.summary}
+                      highlights={project.highlights}
+                      tags={tags}
+                      url={meta.url}
+                      note={project.note}
+                      labels={{
+                        details: t.common.details,
+                        workedOn: t.common.workedOn,
+                        tags: project.focus ? t.common.focus : t.common.stack,
+                        visitSite: t.common.visitSite,
+                        newTab: t.common.newTab,
+                      }}
+                    />
+                    {meta.url && (
+                      <Button asChild variant="ghost" size="sm" className="pointer-coarse:h-11">
+                        <ExternalLink href={meta.url} newTabLabel={t.common.newTab}>
+                          {t.common.visitSite}
+                        </ExternalLink>
+                      </Button>
+                    )}
+                  </div>
                 </div>
-                <h3 className="mt-6 flex items-center gap-3 text-xl font-semibold tracking-tight sm:text-2xl">
-                  <Icon aria-hidden className="size-5 shrink-0 text-brand" />
-                  {project.name}
-                </h3>
-                <p className="mt-1 text-sm text-muted-foreground">{project.role}</p>
-                <p
-                  className={cn(
-                    "mt-4 flex-1 leading-relaxed text-pretty text-muted-foreground",
-                    featured && "max-w-3xl",
-                  )}
-                >
-                  {project.summary}
-                </p>
-                <div className="mt-6 border-t border-border/60 pt-5">
-                  <TechList items={tags} />
-                </div>
-                <div className="mt-5 flex flex-wrap items-center gap-4">
-                  <ProjectDetails
-                    name={project.name}
-                    category={project.category}
-                    role={project.role}
-                    period={formatPeriod(meta.period, locale, t.common.present)}
-                    summary={project.summary}
-                    highlights={project.highlights}
-                    tags={tags}
-                    url={meta.url}
-                    note={project.note}
-                    labels={{
-                      details: t.common.details,
-                      workedOn: t.common.workedOn,
-                      tags: project.focus ? t.common.focus : t.common.stack,
-                      visitSite: t.common.visitSite,
-                      newTab: t.common.newTab,
-                    }}
-                  />
-                  {meta.url && (
-                    <ExternalLink
-                      href={meta.url}
-                      newTabLabel={t.common.newTab}
-                      className="text-sm font-medium underline-offset-4 hover:underline"
-                    >
-                      {t.common.visitSite}
-                    </ExternalLink>
-                  )}
-                </div>
+                {featured && <Screenshot src={meta.image} alt={project.imageAlt} icon={Icon} />}
               </article>
             </li>
           )
@@ -148,7 +212,7 @@ export function Projects({ locale, projects, t }: ProjectsProps) {
               <ExternalLink
                 href={site.url}
                 newTabLabel={t.common.newTab}
-                className="font-medium underline-offset-4 hover:underline"
+                className="font-medium underline-offset-4 hover:underline pointer-coarse:py-2.5"
               >
                 {site.name}
               </ExternalLink>

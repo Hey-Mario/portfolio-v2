@@ -110,7 +110,7 @@ export function ContactForm({ labels }: ContactFormProps) {
             <Select value={field.value ?? ""} onValueChange={field.onChange}>
               <SelectTrigger
                 id="contact-reason"
-                className="w-full"
+                className="w-full pointer-coarse:h-11"
                 aria-invalid={!!errors.reason}
                 aria-describedby={errors.reason ? "contact-reason-error" : undefined}
                 onBlur={field.onBlur}
@@ -133,6 +133,7 @@ export function ContactForm({ labels }: ContactFormProps) {
         <Textarea
           id="contact-message"
           rows={6}
+          className="min-h-36"
           placeholder={labels.messagePlaceholder}
           aria-invalid={!!errors.message}
           aria-describedby={errors.message ? "contact-message-error" : undefined}

@@ -9,25 +9,24 @@ export const en: PortfolioContent = {
     role: "Full-stack engineer",
     availability: "Available now · missions & full-time roles",
     title: "I build SaaS and marketplace platforms.",
-    highlights: ["SaaS", "marketplace"],
+    highlights: ["SaaS and marketplace"],
     summary:
-      "I'm Mario, a full-stack engineer with 3.5+ years in production. I've shipped features for a solar-energy group's simulation, rental and marketplace products, an e-learning marketplace and an online auction platform, using Next.js, Angular, NestJS, Python and Laravel.",
+      "Full-stack engineer shipping production SaaS, marketplaces and auction platforms with Next.js, Angular, NestJS and Laravel.",
     location: "Antananarivo, Madagascar · Remote (UTC+3)",
     primaryCta: "Start a project",
     secondaryCta: "Download CV",
   },
   stats: [
     { value: "3.5+ yrs", label: "building production software" },
-    { value: "10+", label: "live websites & platforms I've contributed to" },
+    { value: "10+", label: "live platforms I've worked on" },
     { value: "6", label: "hackathon & competition podiums" },
   ],
   about: {
     eyebrow: "About",
     title: "Engineer first, product-minded always.",
     paragraphs: [
-      "Since May 2023 at Solar Transit Ltd (Ivato), I build software for a Mauritius-based solar-energy group: a paid solar simulator, a leasing customer journey, a supplier marketplace and an internal ERP.",
-      "I delivered Akademika.mg, an e-learning marketplace, as a freelance mission. Since October 2026 I'm a partner at Pyxis, the company behind Lavanty.online, Madagascar's online auction marketplace.",
-      "I'm completing an MSc in AI & Big Data (ESTIA). I use AI-assisted development daily as an accelerator, never as a substitute for design, tests and review.",
+      "I care about the whole product, not just the ticket: clear specs, business logic that holds up, and pages that are fast and secure.",
+      "I'm completing an MSc in AI & Big Data (ESTIA) and use AI-assisted development daily as an accelerator, never as a substitute for design, tests and review.",
     ],
     pillarsTitle: "Why teams work with me",
     pillars: [
@@ -75,9 +74,8 @@ export const en: PortfolioContent = {
           "Validated, documented REST APIs, plus Odoo analytics, email, PDF, maps and file storage.",
       },
       {
-        title: "Performance, security & maintenance",
-        description:
-          "Slow pages, heavy queries, authentication weaknesses and missing tests: fixed and documented.",
+        title: "Audits & maintenance",
+        description: "Slow pages, heavy queries and missing tests: found, fixed and documented.",
       },
       {
         title: "Cross-platform mobile apps",
@@ -102,7 +100,7 @@ export const en: PortfolioContent = {
       },
       {
         title: "Ship & support",
-        description: "Deployment, docs, follow-up.",
+        description: "Deployment, docs and follow-up after launch.",
       },
     ],
   },
@@ -126,9 +124,9 @@ export const en: PortfolioContent = {
       },
       {
         id: "solar-transit",
-        company: "Solar Transit Ltd (FINAMAD)",
+        company: "Solar Transit Ltd",
         role: "Full-stack developer",
-        location: "Ivato, Madagascar",
+        location: "Ivato, Madagascar · FINAMAD",
         summary: "Sales, simulation, marketplaces and customer journeys for a solar-energy group.",
         highlights: [
           "PVGIS paid simulator: multi-currency, multilingual, RTL, SEO, result caching.",
@@ -173,6 +171,7 @@ export const en: PortfolioContent = {
       {
         id: "lavanty",
         name: "Lavanty.online",
+        imageAlt: "Lavanty.online home page: live auctions in Madagascar",
         category: "Online auction marketplace",
         role: "Partner · full-stack engineer",
         summary:
@@ -190,6 +189,7 @@ export const en: PortfolioContent = {
       {
         id: "akademika",
         name: "Akademika.mg",
+        imageAlt: "Akademika.mg home page: online courses",
         category: "E-learning marketplace",
         role: "Full-stack developer · freelance",
         summary: "A Udemy-style platform for Madagascar: courses in Ariary, quizzes, certificates.",
@@ -205,6 +205,7 @@ export const en: PortfolioContent = {
       {
         id: "pvgis",
         name: "PVGIS24 · pvgis.com",
+        imageAlt: "PVGIS24 solar panel calculator with a satellite map",
         category: "Solar simulation SaaS",
         role: "Full-stack developer · Solar Transit",
         summary:
@@ -222,6 +223,7 @@ export const en: PortfolioContent = {
       {
         id: "solar-rent",
         name: "Solar Rent",
+        imageAlt: "Solar Rent home page: solar energy without risk",
         category: "Solar leasing platform · Mauritius",
         role: "Full-stack developer · Solar Transit",
         summary:
@@ -268,6 +270,7 @@ export const en: PortfolioContent = {
       {
         id: "pyxis-site",
         name: "pyxis.site",
+        imageAlt: "Pyxis home page: your business, the right digital product",
         category: "Company website",
         role: "Partner · front-end",
         summary: "The bilingual website of Pyxis, the studio behind Lavanty.",
@@ -392,8 +395,6 @@ export const en: PortfolioContent = {
         degree: "Bachelor's degree in Computer Science, Integration & Development",
         school: "ESTI, Antananarivo",
       },
-      { degree: "Laravel framework training", school: "NDAO EDEV" },
-      { degree: "English language course", school: "ECM English Course Madagascar" },
     ],
     awardsTitle: "Hackathons & competitions",
     awards: [
@@ -438,7 +439,6 @@ export const en: PortfolioContent = {
   contact: {
     eyebrow: "Contact",
     title: "Let's build something together",
-    intro:
-      "Tell me about your project or the role you're hiring for. I'm available right away for missions and full-time positions.",
+    intro: "Tell me about your project or the role you're hiring for. I reply within 24h.",
   },
 }

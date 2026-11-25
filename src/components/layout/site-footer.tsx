@@ -16,7 +16,7 @@ export async function SiteFooter({ t }: { t: Messages }) {
     <footer className="border-t border-border/60">
       <div className="container-page flex flex-col gap-2 py-8 text-sm text-muted-foreground sm:flex-row sm:items-center sm:justify-between">
         <p>
-          © {year} {siteConfig.name}
+          © {year} {siteConfig.shortName}
         </p>
         <p>
           {t.footer.builtWith}{" "}

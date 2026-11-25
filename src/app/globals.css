@@ -227,39 +227,18 @@
   }
 }
 
-/* Content waits invisible until ScrollAnimations plays its Animate.css effect. It only hides
-   when scripting is on and motion is allowed, so no-JS and reduced-motion visitors see everything. */
+/* Content waits invisible until ScrollAnimations fades it in (its Web Animation holds opacity: 1).
+   It only hides when scripting is on and motion is allowed, so no-JS and reduced-motion visitors
+   see everything. */
 @utility reveal {
   @media (scripting: enabled) and (prefers-reduced-motion: no-preference) {
-    &:not([data-revealed], .animated) {
-      opacity: 0;
-    }
+    opacity: 0;
   }
 }
 
 /* ---------- Motion & decoration ----------
    Everything below is progressive enhancement: scroll-driven effects only run
    where supported and never for users who prefer reduced motion. */
-
-/* Endless tool strip under the hero; pauses on hover and stands still for reduced motion. */
-@utility marquee {
-  mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
-}
-
-@utility marquee-move {
-  @media (prefers-reduced-motion: no-preference) {
-    animation: marquee 40s linear infinite;
-    &:hover {
-      animation-play-state: paused;
-    }
-  }
-}
-
-@keyframes marquee {
-  to {
-    transform: translateX(-50%);
-  }
-}
 
 /* Thin brand-coloured progress bar tied to the page scroll. */
 @utility scroll-progress {
@@ -310,23 +289,6 @@
 @keyframes grow-y {
   from {
     transform: scaleY(0);
-  }
-}
-
-/* Slight parallax for the portrait's offset frame. */
-@utility drift {
-  @media (prefers-reduced-motion: no-preference) {
-    @supports (animation-timeline: view()) {
-      animation: drift-down linear both;
-      animation-timeline: view();
-      animation-range: exit 0% exit 100%;
-    }
-  }
-}
-
-@keyframes drift-down {
-  to {
-    transform: translate(0.75rem, 2.5rem);
   }
 }
 

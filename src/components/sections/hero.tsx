@@ -29,27 +29,34 @@ export function Hero({ locale, hero, stats, t }: HeroProps) {
       <div className="container-page pt-10 pb-14 sm:pt-16 sm:pb-20 lg:pt-20 lg:pb-24">
         <div className="grid items-center gap-10 lg:grid-cols-[1fr_auto] lg:gap-16">
           <div>
-            <p
-              style={step(0)}
-              className="animated fadeInUp inline-flex items-center gap-2 rounded-full border border-border/80 bg-card/80 px-3 py-1 text-xs font-medium text-muted-foreground backdrop-blur"
-            >
-              <span className="relative flex size-2" aria-hidden>
-                <span className="absolute inline-flex size-full animate-ping rounded-full bg-emerald-500 opacity-60 motion-reduce:animate-none" />
-                <span className="relative inline-flex size-2 rounded-full bg-emerald-500" />
-              </span>
-              {hero.availability}
-            </p>
+            <div className="flex items-center gap-3">
+              {siteConfig.headshot && (
+                <Image
+                  src={siteConfig.headshot}
+                  alt=""
+                  width={96}
+                  height={96}
+                  sizes="44px"
+                  style={step(0)}
+                  className="animated fadeInUp size-11 rounded-full object-cover object-top ring-1 ring-border lg:hidden"
+                />
+              )}
+              <p
+                style={step(0)}
+                className="animated fadeInUp inline-flex items-center gap-2 rounded-full border border-border/80 bg-card/80 px-3 py-1 text-xs font-medium text-muted-foreground backdrop-blur"
+              >
+                <span className="relative flex size-2" aria-hidden>
+                  <span className="absolute inline-flex size-full animate-ping rounded-full bg-emerald-500 opacity-60 motion-reduce:animate-none" />
+                  <span className="relative inline-flex size-2 rounded-full bg-emerald-500" />
+                </span>
+                {hero.availability}
+              </p>
+            </div>
 
             <h1 id="hero-title" className="mt-6 max-w-4xl sm:mt-8">
               <span
                 style={step(1)}
-                className="animated fadeInUp block font-mono text-sm tracking-wide text-brand"
-              >
-                {siteConfig.shortName} · <span className="whitespace-nowrap">{hero.role}</span>
-              </span>
-              <span
-                style={step(2)}
-                className="animated fadeInUp mt-3 block text-4xl font-semibold tracking-tight text-balance sm:mt-4 sm:text-5xl lg:text-6xl"
+                className="animated fadeInUp block text-4xl font-semibold tracking-tight text-balance sm:text-5xl lg:text-6xl"
               >
                 <HighlightedText text={hero.title} terms={hero.highlights} />
               </span>
@@ -98,22 +105,15 @@ export function Hero({ locale, hero, stats, t }: HeroProps) {
           </div>
 
           {siteConfig.headshot && (
-            <div
-              style={step(2)}
-              className="animated fadeInUp relative order-first mx-auto w-36 sm:w-44 lg:order-none lg:mr-4 lg:w-80"
-            >
-              <div
-                aria-hidden
-                className="absolute inset-0 translate-x-3 translate-y-3 drift rounded-2xl border border-brand/40 bg-brand/5 lg:translate-x-4 lg:translate-y-4"
-              />
+            <div style={step(2)} className="animated fadeInUp relative mr-4 hidden w-80 lg:block">
               <Image
                 src={siteConfig.headshot}
                 alt={siteConfig.shortName}
                 width={800}
                 height={1000}
                 priority
-                sizes="(min-width: 1024px) 320px, (min-width: 640px) 176px, 144px"
-                className="relative aspect-4/5 w-full rounded-2xl object-cover shadow-lg ring-1 shadow-brand/10 ring-border"
+                sizes="320px"
+                className="relative aspect-4/5 w-full rounded-2xl object-cover shadow-xl ring-1 shadow-foreground/10 ring-border"
               />
             </div>
           )}

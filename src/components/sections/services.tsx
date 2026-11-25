@@ -5,10 +5,6 @@ import type { PortfolioContent } from "@/content/types"
 
 const serviceIcons = [AppWindowIcon, StoreIcon, PlugIcon, WrenchIcon, SmartphoneIcon]
 
-import { cn } from "@/lib/utils"
-
-const isLastPair = (index: number, total: number) => total % 3 === 2 && index >= total - 2
-
 export function Services({ services }: { services: PortfolioContent["services"] }) {
   return (
     <Section
@@ -18,27 +14,21 @@ export function Services({ services }: { services: PortfolioContent["services"] 
       title={services.title}
       intro={services.intro}
     >
-      <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-6">
+      <ul className="grid gap-x-12 border-t border-border/60 lg:grid-cols-2">
         {services.items.map((service, index) => {
           const Icon = serviceIcons[index % serviceIcons.length]
           return (
             <li
               key={service.title}
-              data-animate={["fadeInLeft", "fadeInUp", "fadeInRight"][index % 3]}
-              className={cn(
-                "rounded-xl border border-border/80 bg-card p-5 reveal transition duration-300 hover:-translate-y-0.5 hover:border-brand/40 hover:shadow-md hover:shadow-brand/5 sm:p-6 lg:col-span-2",
-                // A last row of two cards shares the full width instead of leaving a gap.
-                isLastPair(index, services.items.length) && "lg:col-span-3",
-                index === services.items.length - 1 && index % 2 === 0 && "sm:max-lg:col-span-2",
-              )}
+              className="flex gap-4 border-b border-border/60 py-5 reveal sm:py-6"
             >
-              <span className="grid size-10 place-items-center rounded-lg bg-brand/10 text-brand">
-                <Icon aria-hidden className="size-5" />
-              </span>
-              <h3 className="mt-4 font-semibold">{service.title}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-pretty text-muted-foreground">
-                {service.description}
-              </p>
+              <Icon aria-hidden className="mt-0.5 size-5 shrink-0 text-brand" />
+              <div>
+                <h3 className="font-semibold">{service.title}</h3>
+                <p className="mt-1.5 text-sm leading-relaxed text-pretty text-muted-foreground">
+                  {service.description}
+                </p>
+              </div>
             </li>
           )
         })}

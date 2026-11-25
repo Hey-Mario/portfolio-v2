@@ -33,6 +33,14 @@ describe("portfolio content", () => {
     }
   })
 
+  it("describes every project screenshot in every locale", () => {
+    for (const locale of [en, fr]) {
+      for (const project of locale.projects.items) {
+        if (projectMeta[project.id].image) expect(project.imageAlt, project.id).toBeTruthy()
+      }
+    }
+  })
+
   it("keeps lists aligned between locales", () => {
     expect(fr.stats).toHaveLength(en.stats.length)
     expect(fr.testimonial.quotes).toHaveLength(en.testimonial.quotes.length)
