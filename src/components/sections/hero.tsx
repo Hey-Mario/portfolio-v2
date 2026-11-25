@@ -119,14 +119,16 @@ export function Hero({ locale, hero, stats, t }: HeroProps) {
           )}
         </div>
 
-        <dl className="mt-10 grid gap-4 border-t border-border/60 pt-6 sm:mt-14 sm:grid-cols-3 sm:gap-8 sm:pt-10 lg:mt-16">
+        <dl className="mt-10 grid grid-cols-3 divide-x divide-border/60 border-y border-border/60 sm:mt-14 lg:mt-16">
           {stats.map((stat) => (
             <div
               key={stat.label}
-              className="grid grid-cols-[6.5rem_1fr] items-baseline gap-x-4 reveal sm:flex sm:flex-col-reverse sm:gap-1"
+              className="flex flex-col gap-1 px-3 py-5 reveal first:pl-0 sm:gap-2 sm:px-6 sm:py-8"
             >
-              <dt className="text-sm text-muted-foreground">{stat.label}</dt>
-              <dd className="order-first text-3xl font-semibold tracking-tight whitespace-nowrap sm:order-none sm:text-5xl lg:text-6xl">
+              <dt className="text-xs leading-snug text-pretty text-muted-foreground sm:text-sm">
+                {stat.label}
+              </dt>
+              <dd className="order-first text-2xl font-semibold tracking-tight whitespace-nowrap sm:text-5xl lg:text-6xl">
                 <CountUp value={stat.value} />
               </dd>
             </div>

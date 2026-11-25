@@ -114,31 +114,26 @@ export function Projects({ locale, projects, t }: ProjectsProps) {
       title={projects.title}
       intro={projects.intro}
     >
-      <ul
-        tabIndex={0}
-        aria-label={projects.title}
-        className="-mx-5 flex snap-x snap-mandatory scroll-px-5 gap-4 overflow-x-auto px-5 pb-4 reveal sm:-mx-8 sm:scroll-px-8 sm:px-8 md:mx-0 md:grid md:snap-none md:grid-cols-2 md:overflow-visible md:px-0 md:pb-0"
-      >
+      <ul aria-label={projects.title} className="grid gap-4 reveal md:grid-cols-2">
         {projects.items.map((project, index) => {
           const meta = projectMeta[project.id]
           const featured = index === 0
           const tags = project.focus ?? meta.stack
           const Icon = projectIcons[project.id]
           return (
-            <li
-              key={project.id}
-              className={cn(
-                "w-[85%] shrink-0 snap-center sm:w-[60%] md:w-auto",
-                featured && "md:col-span-2",
-              )}
-            >
+            <li key={project.id} className={cn(featured && "md:col-span-2")}>
               <article
                 className={cn(
-                  "group relative flex h-full flex-col gap-6 rounded-2xl border border-border/80 bg-card p-6 transition duration-300 hover:border-foreground/25 hover:shadow-lg hover:shadow-foreground/5 sm:p-8",
+                  "group relative flex h-full flex-col gap-6 rounded-2xl border border-border/80 bg-card p-5 transition duration-300 hover:border-foreground/25 hover:shadow-lg hover:shadow-foreground/5 sm:p-8",
                   featured && "md:grid md:grid-cols-[1fr_1.1fr] md:items-center md:gap-10",
                 )}
               >
-                {!featured && <Screenshot src={meta.image} alt={project.imageAlt} icon={Icon} />}
+                <Screenshot
+                  src={meta.image}
+                  alt={project.imageAlt}
+                  icon={Icon}
+                  className={cn(featured && "md:order-last")}
+                />
                 <div className="flex flex-1 flex-col">
                   <div className="flex items-center justify-between gap-3">
                     <p className="flex items-center gap-3 font-mono text-xs tracking-wider text-muted-foreground uppercase">
@@ -150,7 +145,7 @@ export function Projects({ locale, projects, t }: ProjectsProps) {
                   </div>
                   <h3
                     className={cn(
-                      "mt-6 flex items-center gap-3 text-xl font-semibold tracking-tight sm:text-2xl",
+                      "mt-4 flex items-center gap-3 text-xl font-semibold tracking-tight sm:text-2xl",
                       featured && "md:text-3xl",
                     )}
                   >
@@ -197,7 +192,6 @@ export function Projects({ locale, projects, t }: ProjectsProps) {
                     )}
                   </div>
                 </div>
-                {featured && <Screenshot src={meta.image} alt={project.imageAlt} icon={Icon} />}
               </article>
             </li>
           )

@@ -39,7 +39,7 @@ export function LocaleSwitcher({ locale, label }: { locale: Locale; label: strin
             title={names[code]}
             aria-current={active ? "true" : undefined}
             className={cn(
-              "relative z-10 rounded-full px-2.5 py-1 text-center font-medium transition-colors pointer-coarse:px-3.5 pointer-coarse:py-3.5",
+              "relative z-10 rounded-full px-2.5 py-1 text-center font-medium transition-colors pointer-coarse:after:absolute pointer-coarse:after:inset-x-0 pointer-coarse:after:-inset-y-2.5",
               active ? "text-background" : "text-muted-foreground hover:text-foreground",
             )}
             onClick={(event) => {
